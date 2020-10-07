@@ -474,7 +474,7 @@ var instructions_block = {
 		trial_id: 'instruction'
 	},
 	pages: [
-		"<div class = centerbox><p class = block-text> HI </p><div class = decision-left style='background:" +
+		"<div class = centerbox><p class = block-text> HI  there this is me</p><div class = decision-left style='background:" +
 		curr_colors[0] + "; '><img class = 'decision-stim' src= '" + curr_images[0] +
 		"'></img></div><div class = decision-right style='background:" + curr_colors[0] +
 		";'> <img class = 'decision-streg' src= '" + streg_img[0] +"'><img class = 'decision-stim' src= '" + curr_images[1] + "'></img></div></div>",
