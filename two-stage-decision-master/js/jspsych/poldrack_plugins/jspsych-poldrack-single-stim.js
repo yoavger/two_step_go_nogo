@@ -5,7 +5,7 @@
  * plugin for displaying a stimulus and getting a keyboard response
  *
  * documentation: docs.jspsych.org
- *
+ * 
  * Modified by Ian Eisenberg to record more trial parameters
  **/
 
@@ -116,6 +116,7 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
       if (response.key == -1) {
         response = info;
       }
+
       if (trial.response_ends_trial) {
         end_trial();
       }

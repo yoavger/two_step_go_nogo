@@ -27,7 +27,7 @@
 
 .faded {
 	opacity: .4;
-	filter: alpha(opacity=40);
+	filter: alpha(opacity=40);	
 }
 
 .fade {
@@ -37,13 +37,12 @@
 
 .decision-stim {
     display: block;
-    width: 18vw;
-  	height: 18vw;
+    height: 10vw;
 	position:absolute;
 	top:50%;
 	left:50%;
 	transform: translate(-50%,-50%);
-}
+} 	
 
 
 .decision-left {
@@ -85,14 +84,4 @@
   left:50%;
   margin-right:-50%;
   transform: translate(-50%,-5%);
-}
-
-.decision-streg {
-  display: block;
-  height: 10vw;
-  width: 10vw;
-	position:absolute;
-  top:-30%;
-  left:50%;
-	transform: translate(-50%,-50%);
 }
