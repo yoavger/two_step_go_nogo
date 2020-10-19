@@ -39,7 +39,7 @@ function assessPerformance() {
 	var avg_rt = -1
 	if (rt_array.length !== 0) {
 		avg_rt = math.median(rt_array)
-	} 
+	}
 		//calculate whether response distribution is okay
 	var responses_ok = true
 	Object.keys(choice_counts).forEach(function(key, index) {
@@ -276,7 +276,7 @@ var get_second_selected = function() {
 			stim_selected: second_selected
 		})
 	}
-	
+
 }
 
 /*
@@ -344,9 +344,9 @@ var performance_var = 0
 
 // task specific variables
 var total_score = 0 //track performance
-var practice_trials_num = 50
-var test_trials_num = 200
-var stim_ids = [] //Tracks the ids of the last chosen stims. 
+var practice_trials_num = 1
+var test_trials_num = 4
+var stim_ids = [] //Tracks the ids of the last chosen stims.
 var current_trial = -1
 var first_selected = -1 //Tracks the ID of the selected fs stimulus
 var second_selected = -1 //Tracks the ID of the selected fs stimulus
@@ -386,6 +386,8 @@ var practice_images = jsPsych.randomization.repeat(
 		"images/84.png",
 		"images/85.png",
 	], 1)
+
+	var strategy_stim = ["stimulus/right_arrow_black.png","stimulus/left_arrow_black.png","stimulus/no_go_black.png"]
 
 //Preload images
 jsPsych.pluginAPI.preloadImages(practice_images)
@@ -453,7 +455,8 @@ var attention_check_block = {
 
 
 var feedback_instruct_text =
-	'Welcome to the experiment. This task will take about 25 minutes. Press <strong>enter</strong> to begin.'
+	'Welcome to the experiment. This task will take about 25 minutes. \
+	Press <strong>enter</strong> to begin.'
 var feedback_instruct_block = {
 	type: 'poldrack-text',
 	data: {
@@ -472,12 +475,25 @@ var instructions_block = {
 		trial_id: 'instruction'
 	},
 	pages: [
-		"<div class = centerbox><p class = block-text>In this task, you need to make decisions in two stages to get a reward. In each stage, two abstract shapes will come up on the screen overlaid on colored backgrounds. You choose one by pressing either the left or right arrow keys.</p><p class = block-text>Below is an example 'stage' with two shapes on colored backgrounds.</p><div class = decision-left style='background:" +
-		curr_colors[0] + "; '><img class = 'decision-stim' src= '" + curr_images[0] +
-		"'></img></div><div class = decision-right style='background:" + curr_colors[0] +
-		"; '><img class = 'decision-stim' src= '" + curr_images[1] + "'></img></div></div>",
-		'<div class = centerbox><p class = block-text>Both the first and second stages will look something like that. After you make your first-stage choice, you will move to one of two second-stages (referred to as 2a and 2b). Each second stage has its own background color and has two different abstract shapes.</p><p class = block-text>In total, the task has three "stages": a first stage which can lead to either stage 2a or stage 2b, each with their own background color and shapes.</p></div>',
-		'<div class = centerbox><p class = block-text>Each first-stage choice is primarily associated with one of the two second-stages. This means that each first-stage choice is more likely to bring you to one of the two second-stages than the other.</p><p class = block-text>For instance, one first-stage shape may bring you to 2a most of the time, and seldom bring you to 2b, while the other shape does the reverse.</p><p class = block-text>After moving to one of the two second-stages, you respond by again pressing an arrow key.</p><p class = block-text>After you end these instructions you will see an example trial.</p></div>'
+		"<div class = centerbox> \
+		<p class = block-text> Welcome! </p> \
+		<p class = block-text> Here is a example round <br> <br> <br> <br> <br> <br> <br> <br> <br> </p> \
+		<div class = decision-left style='background:" + curr_colors[0] + ";'>  \
+		<img class = 'decision-stim' src= '" + curr_images[0] +"'> </img> \
+		<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div> \
+		<div class = decision-right style='background:" + curr_colors[0] +"; '> \
+		<img class = 'decision-stim' src= '" + curr_images[1] + "'></img> \
+		<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img> </div></div>",
+
+		'<div class = centerbox> <p class = block-text> \
+		Each second stage has its own background color and has two different abstract shapes.</p> \
+		<p class = block-text> In total, the task has three "stages": a first stage which can lead to either stage 2a or stage 2b, \
+		each with their own background color and shapes.</p></div>',
+		'<div class = centerbox> \
+		<p class = block-text> Each first-stage choice is primarily associated with one of the two second-stages. \
+		This means that each first-stage choice is more likely to bring you to one of the two second-stages than the other.</p>\
+		<p class = block-text>After you end these instructions you will see an example trial.</p> \
+		</div>'
 	],
 	allow_keys: false,
 	show_clickable_nav: true,
@@ -511,7 +527,8 @@ var second_instructions_block = {
 		trial_id: 'instruction'
 	},
 	pages: [
-		'<div class = centerbox><p class = block-text>As you saw, you get feedback after your second-stage choice: either a gold coin or a red "0". The gold coins determine your bonus pay, so try to get as many as possible!</p><p class = block-text>As mentioned, there are four second-stage shapes: two shapes in 2a and two shapes in 2b. These four shapes each have a different chance of paying a gold coin. You want to learn which shape is the best so you can get as many coins as possible.</p></div>',
+		'<div class = centerbox><p class = block-text>As you saw, you get feedback after your second-stage choice: \
+		 either a gold coin or a red "0". The gold coins determine your bonus pay, so try to get as many as possible!</p><p class = block-text>As mentioned, there are four second-stage shapes: two shapes in 2a and two shapes in 2b. These four shapes each have a different chance of paying a gold coin. You want to learn which shape is the best so you can get as many coins as possible.</p></div>',
 		'<div class = centerbox><p class = block-text>The chance of getting a coin from each second-stage shape changes over the experiment, so the best choice early on may not be the best choice later.</p><p class = block-text>In contrast, the chance of going to one of the second-stages after choosing one of the first-stage choices is fixed throughout the experiment. If you find over time that one first-stage shape brings you to 2a most of the time, it will stay that way for the whole experiment.</p></div>',
 		'<div class = centerbox><p class = block-text>After you end instructions we will start with some practice.</p><p class = block-text>After practice we will show you the instructions again, but please make sure you understand them as well as you can now.</p></div>'
 	],
@@ -609,7 +626,7 @@ var first_stage = {
 	timing_response: 2000,
 	show_response: true,
 	timing_post_trial: 0,
-	response_ends_trial: true,
+	response_ends_trial: false,
 	data: {
 		trial_id: 'first_stage'
 	},

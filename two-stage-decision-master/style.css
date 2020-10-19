@@ -27,7 +27,7 @@
 
 .faded {
 	opacity: .4;
-	filter: alpha(opacity=40);	
+	filter: alpha(opacity=40);
 }
 
 .fade {
@@ -36,14 +36,13 @@
 }
 
 .decision-stim {
-    display: block;
-    height: 10vw;
+  display: block;
+  height: 10vw;
 	position:absolute;
 	top:50%;
 	left:50%;
 	transform: translate(-50%,-50%);
-} 	
-
+}
 
 .decision-left {
 	width: 18vw;
@@ -78,10 +77,20 @@
 }
 
 .decision-fb {
-    width:200px;
+  width:200px;
   position:absolute;
   top:50%;
   left:50%;
   margin-right:-50%;
   transform: translate(-50%,-5%);
+}
+
+
+.strategy_stim {
+  display: block;
+  height: 15vw;
+	position:absolute;
+	top:-40%;
+	left:50%;
+	transform: translate(-50%,-50%);
 }
