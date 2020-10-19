@@ -133,15 +133,20 @@ Generate first stage stims. Takes in an array of images and colors (which change
 var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
 		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + images[0] + "'></img></div>" +
+			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
+			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
+
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + images[1] + "'></img></div>",
+			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
+			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
 		stim_order: [0, 1]
 	}, {
 		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + images[1] + "'></img></div>" +
+			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
+			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + images[0] + "'></img></div>",
+			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
+				"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
 		stim_order: [1, 0]
 	}]
 	return fs_stim
@@ -484,7 +489,6 @@ var instructions_block = {
 		<div class = decision-right style='background:" + curr_colors[0] +"; '> \
 		<img class = 'decision-stim' src= '" + curr_images[1] + "'></img> \
 		<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img> </div></div>",
-
 		'<div class = centerbox> <p class = block-text> \
 		Each second stage has its own background color and has two different abstract shapes.</p> \
 		<p class = block-text> In total, the task has three "stages": a first stage which can lead to either stage 2a or stage 2b, \
@@ -527,8 +531,7 @@ var second_instructions_block = {
 		trial_id: 'instruction'
 	},
 	pages: [
-		'<div class = centerbox><p class = block-text>As you saw, you get feedback after your second-stage choice: \
-		 either a gold coin or a red "0". The gold coins determine your bonus pay, so try to get as many as possible!</p><p class = block-text>As mentioned, there are four second-stage shapes: two shapes in 2a and two shapes in 2b. These four shapes each have a different chance of paying a gold coin. You want to learn which shape is the best so you can get as many coins as possible.</p></div>',
+		'<div class = centerbox><p class = block-text>As you saw, you get feedback after your second-stage choice: either a gold coin or a red "0". The gold coins determine your bonus pay, so try to get as many as possible!</p><p class = block-text>As mentioned, there are four second-stage shapes: two shapes in 2a and two shapes in 2b. These four shapes each have a different chance of paying a gold coin. You want to learn which shape is the best so you can get as many coins as possible.</p></div>',
 		'<div class = centerbox><p class = block-text>The chance of getting a coin from each second-stage shape changes over the experiment, so the best choice early on may not be the best choice later.</p><p class = block-text>In contrast, the chance of going to one of the second-stages after choosing one of the first-stage choices is fixed throughout the experiment. If you find over time that one first-stage shape brings you to 2a most of the time, it will stay that way for the whole experiment.</p></div>',
 		'<div class = centerbox><p class = block-text>After you end instructions we will start with some practice.</p><p class = block-text>After practice we will show you the instructions again, but please make sure you understand them as well as you can now.</p></div>'
 	],
