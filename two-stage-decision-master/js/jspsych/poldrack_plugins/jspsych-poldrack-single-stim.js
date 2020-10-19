@@ -5,7 +5,7 @@
  * plugin for displaying a stimulus and getting a keyboard response
  *
  * documentation: docs.jspsych.org
- * 
+ *
  * Modified by Ian Eisenberg to record more trial parameters
  **/
 
@@ -31,6 +31,7 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
     trial.timing_post_trial = (typeof trial.timing_post_trial === 'undefined') ? 1000 : trial.timing_post_trial;
     trial.is_html = (typeof trial.is_html == 'undefined') ? false : trial.is_html;
     trial.prompt = trial.prompt || "";
+    trial.stage = trial.stage || 0;
 
     // this array holds handlers from setTimeout calls
     // that need to be cleared if the trial ends early
@@ -148,6 +149,14 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
       }, trial.timing_response);
       setTimeoutHandlers.push(t2);
     }
+
+    /* deal with the first stage no-go situation
+      if (trail.stage == 1){
+
+      }
+      */
+
+
 
   };
 
