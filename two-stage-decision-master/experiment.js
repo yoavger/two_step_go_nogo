@@ -219,7 +219,19 @@ var get_first_selected = function() {
 			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
 			"; '>" +
 			"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
-	} else {
+	}
+	else if (choice == -1){
+		first_selected = stim_ids[0]
+		var first_notselected = stim_ids[1 - 0]
+		return "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+			"; '>" +
+			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
+			"<div class = '" + stim_side[1 - 0] + " fade' style='background:" + curr_colors[0] +
+			"; '>" +
+			"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
+
+	}
+	else {
 		first_selected = -1
 		jsPsych.data.addDataToLastTrial({
 			stim_selected: first_selected
@@ -362,6 +374,8 @@ var transition = ''
 var FB_matrix = initialize_FB_matrix() //tracks the reward probabilities for the four final stimulus
 var exp_stage = 'practice'
 
+// Actions go or no-go
+var choices_1 = [-1,37,39]
 // Actions for left and right
 var choices = [37, 39]
 var stim_side = ['decision-left', 'decision-right']
@@ -482,7 +496,7 @@ var instructions_block = {
 	pages: [
 		"<div class = centerbox> \
 		<p class = block-text> Welcome! </p> \
-		<p class = block-text> Here is a example round <br> <br> <br> <br> <br> <br> <br> <br> <br> </p> \
+		<p class = block-text> Here is a example round <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p> \
 		<div class = decision-left style='background:" + curr_colors[0] + ";'>  \
 		<img class = 'decision-stim' src= '" + curr_images[0] +"'> </img> \
 		<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div> \
@@ -624,12 +638,13 @@ var first_stage = {
 	type: "poldrack-single-stim",
 	stimulus: choose_first_stage,
 	is_html: true,
-	choices: choices,
+	choices: choices_1,
 	timing_stim: 2000,
 	timing_response: 2000,
 	show_response: true,
 	timing_post_trial: 0,
 	response_ends_trial: false,
+	stage : 1,
 	data: {
 		trial_id: 'first_stage'
 	},
@@ -653,6 +668,7 @@ var first_stage_selected = {
 	is_html: true,
 	timing_post_trial: 0,
 	timing_response: 1000,
+	stage : 1,
 	on_finish: function() {
 		jsPsych.data.addDataToLastTrial({
 			exp_stage: exp_stage
