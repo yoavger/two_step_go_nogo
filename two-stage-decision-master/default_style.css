@@ -12,7 +12,7 @@ body {
 }
 
 .consent, .consent > p {
-  color: black;
+  color: white;
 }
 
 .jspsych-display-element {
@@ -32,7 +32,7 @@ body {
   top: 2vh;
   height: 94vh;
   width: 90vw;
-  background-color: white;
+  background-color: black;
   box-shadow: 1px 1px 1px #999;
   border-radius: 15px;
   z-index: 0;
@@ -65,6 +65,7 @@ body {
   margin-bottom: 1em;
   font-size: 24px;
   line-height: 120%;
+  color: white;
 }
 
 /* As above but centered instead of justified. Good for instructions with few lines */
@@ -76,6 +77,7 @@ body {
   margin-bottom: 1em;
   font-size: 26px;
   line-height: 120%;
+  color: white;
 }
 
 /* used for large text shown in the center of the screen, like FB or stimuli */
@@ -87,6 +89,7 @@ body {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  color: white;
 }
 
 /* fixation should be used like this in: '<div class = centerbox><div class = fixation>+</div></div>'*/
