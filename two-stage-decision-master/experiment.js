@@ -132,21 +132,22 @@ Generate first stage stims. Takes in an array of images and colors (which change
 */
 var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
-		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
+		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+		  "<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
 		stim_order: [0, 1]
 	}, {
-		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
+		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+		"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
-				"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
+			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
 		stim_order: [1, 0]
 	}]
 	return fs_stim
@@ -191,11 +192,26 @@ and FB. The "get_selected" functions also append data to the preceeding trials
 */
 
 /* Selects the next first stage from a predefined, randomized list of first stages and increases the trial count*/
+
 var choose_first_stage = function() {
 	current_trial = current_trial + 1
 	stim_ids = curr_fs_stims.stim_order[current_trial]
-	return curr_fs_stims.stimulus[current_trial]
+	return [curr_fs_stims.stimulus[current_trial],stim_ids]
 }
+
+/*var choose_first_stage = function() {
+	current_trial = current_trial + 1
+	stim_ids = curr_fs_stims.stim_order[current_trial]
+	if (stim_ids[0] == 0){
+		c = [-1,39]
+	}
+	else {
+		c = [-1,37]
+	}
+	console.log(stim_ids);
+	return [curr_fs_stims.stimulus[current_trial],c]
+}*/
+
 
 /*
 After a stimulus is selected, an animation proceeds whereby the selected stimulus moves to the top of the screen while
@@ -374,8 +390,9 @@ var transition = ''
 var FB_matrix = initialize_FB_matrix() //tracks the reward probabilities for the four final stimulus
 var exp_stage = 'practice'
 
+
 // Actions go or no-go
-var choices_1 = [-1,37,39]
+var choices_1 = [[-1,39],[-1,37]]
 // Actions for left and right
 var choices = [37, 39]
 var stim_side = ['decision-left', 'decision-right']
@@ -643,8 +660,10 @@ var change_phase_block = {
 var first_stage = {
 	type: "poldrack-single-stim",
 	stimulus: choose_first_stage,
+	//stimulus: choose_first_stage[0],
 	is_html: true,
-	choices: choices_1,
+	choices: choices_1[0],
+	//choices: choose_first_stage[1],
 	timing_stim: 2000,
 	timing_response: 2000,
 	show_response: true,

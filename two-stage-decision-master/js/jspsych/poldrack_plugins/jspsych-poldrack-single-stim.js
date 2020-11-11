@@ -33,6 +33,8 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
     trial.prompt = trial.prompt || "";
     trial.stage = trial.stage || 0;
 
+
+
     // this array holds handlers from setTimeout calls
     // that need to be cleared if the trial ends early
     var setTimeoutHandlers = [];
@@ -49,7 +51,7 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
         id: 'jspsych-poldrack-single-stim-stimulus'
       }));
     }
-
+console.log(trial.stimulus);
     //show prompt if there is one
     if (trial.prompt !== "") {
       display_element.append(trial.prompt);
