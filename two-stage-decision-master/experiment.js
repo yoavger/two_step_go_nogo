@@ -194,9 +194,12 @@ and FB. The "get_selected" functions also append data to the preceeding trials
 /* Selects the next first stage from a predefined, randomized list of first stages and increases the trial count*/
 
 var choose_first_stage = function() {
+	var try = new object();
 	current_trial = current_trial + 1
 	stim_ids = curr_fs_stims.stim_order[current_trial]
-	return [curr_fs_stims.stimulus[current_trial],stim_ids]
+	return {"0":curr_fs_stims.stimulus[current_trial]
+		,"1":stim_ids]
+	};
 }
 
 /*var choose_first_stage = function() {
@@ -659,8 +662,9 @@ var change_phase_block = {
 //experiment blocks
 var first_stage = {
 	type: "poldrack-single-stim",
-	stimulus: choose_first_stage,
 	//stimulus: choose_first_stage[0],
+	try: [choose_first_stage
+	stimulus: choose_first_stage,
 	is_html: true,
 	choices: choices_1[0],
 	//choices: choose_first_stage[1],
