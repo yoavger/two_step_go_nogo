@@ -267,6 +267,9 @@ var choose_second_stage = function() {
 		return "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 			curr_ss_stims.stimulus[stim_index]
+			return curr_ss_stims.stimulus[stim_index]
+			 //*S* "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
+			//*S*	"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 	}
 }
 
@@ -328,15 +331,23 @@ var get_feedback = function() {
 		update_FB();
 		FB = 1
 		total_score += 1
-		return "<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
-			"<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
+		// return "<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+		// 	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+		// 	"<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
+		//
+		return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
+	   //*S*	"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+		//*S*	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+
 	} else {
 		update_FB();
 		FB = 0
-		return "<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
-			"<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:60px'>0</p></div>"
+		// return "<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+		// 	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+		// 	"<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:60px'>0</p></div>"
+		return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
+		  //*S*"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+			//*S* "<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
 	}
 }
 
@@ -384,8 +395,12 @@ var stim_move = ['selected-left', 'selected-right']
 //*S* set background Image
 var background_Image = "stimulus/blue_shell_1.png"
 // Set up colors
-var test_colors = jsPsych.randomization.shuffle(['#98bf21', '#FF9966', '#C2C2FF'])
-var practice_colors = jsPsych.randomization.shuffle(['#F1B8D4', '#CCFF99', '#E0C2FF'])
+// var test_colors = jsPsych.randomization.shuffle(['#98bf21', '#FF9966', '#C2C2FF'])
+// var practice_colors = jsPsych.randomization.shuffle(['#F1B8D4', '#CCFF99', '#E0C2FF'])
+var test_colors = jsPsych.randomization.shuffle(['#98bf2100', '#FF996600', '#C2C2FF00'])
+var practice_colors = jsPsych.randomization.shuffle(['#98bf2100', '#FF996600', '#C2C2FF00'])
+//*S* var test_colors = jsPsych.randomization.shuffle(['#98bf21', '#FF9966', '#C2C2FF'])
+//*S* var practice_colors = jsPsych.randomization.shuffle(['#00F1B8D4', '#00CCFF99', '#00E0C2FF'])
 var curr_colors = practice_colors
 
 //The first two stims are first-stage stims.
@@ -408,11 +423,13 @@ var practice_images = jsPsych.randomization.repeat(
 		"images/85.png",
 	], 1)
 
-	var strategy_stim = ["stimulus/right_arrow_black.png","stimulus/left_arrow_black.png","stimulus/no_go_black.png"]
+var strategy_stim = ["stimulus/right_arrow_white.png","stimulus/left_arrow_white.png","stimulus/no_go_white.png"]
 
 //Preload images
 jsPsych.pluginAPI.preloadImages(practice_images)
 jsPsych.pluginAPI.preloadImages(test_images)
+jsPsych.pluginAPI.preloadImages(background_Image)
+
 
 var curr_images = practice_images
 
