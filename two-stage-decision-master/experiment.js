@@ -132,7 +132,8 @@ Generate first stage stims. Takes in an array of images and colors (which change
 */
 var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
-		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
+		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
 
@@ -141,8 +142,8 @@ var get_fs_stim = function(images, colors) {
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
 		stim_order: [0, 1]
 	}, {
-		stimulus: "<div class = decision-left style='background:" + colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
+		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+		"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
@@ -380,7 +381,8 @@ var choices_1 = [-1,37,39]
 var choices = [37, 39]
 var stim_side = ['decision-left', 'decision-right']
 var stim_move = ['selected-left', 'selected-right']
-
+//*S* set background Image
+var background_Image = "stimulus/blue_shell_1.png"
 // Set up colors
 var test_colors = jsPsych.randomization.shuffle(['#98bf21', '#FF9966', '#C2C2FF'])
 var practice_colors = jsPsych.randomization.shuffle(['#F1B8D4', '#CCFF99', '#E0C2FF'])
