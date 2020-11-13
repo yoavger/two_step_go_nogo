@@ -136,7 +136,6 @@ var get_fs_stim = function(images, colors) {
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
@@ -144,10 +143,11 @@ var get_fs_stim = function(images, colors) {
 	}, {
 		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
 		"<div class = decision-left style='background:" + colors[0] + "; '>" +
+			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
-				"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
+			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
 		stim_order: [1, 0]
 	}]
 	return fs_stim
@@ -220,19 +220,27 @@ var get_first_selected = function() {
 			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
 			"; '>" +
 			"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
-	}
-	else if (choice == -1){
-		first_selected = stim_ids[0]
-		var first_notselected = stim_ids[1 - 0]
-		return "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
-			"; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
-			"<div class = '" + stim_side[1 - 0] + " fade' style='background:" + curr_colors[0] +
-			"; '>" +
-			"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
-
-	}
-	else {
+		} else if(choice == -1){
+					if(stim_ids[0] == 0){
+						first_selected = stim_ids[0]
+						var first_notselected = stim_ids[1 - 0]
+						return "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
+							"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
+					}else{
+						first_selected = stim_ids[1]
+						var first_notselected = stim_ids[0]
+						return "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
+							"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
+					}
+	}else {
 		first_selected = -1
 		jsPsych.data.addDataToLastTrial({
 			stim_selected: first_selected
@@ -261,15 +269,16 @@ var choose_second_stage = function() {
 			stage = 1 - stage
 			transition = 'infrequent'
 		}
+
 		var stage_index = stage * 2
 		var stim_index = stage_index + Math.round(Math.random())
 		stim_ids = curr_ss_stims.stim_order[stim_index]
 		return "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 			curr_ss_stims.stimulus[stim_index]
-			return curr_ss_stims.stimulus[stim_index]
-			 //*S* "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
+		 //*S* "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
 			//*S*	"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
+			// curr_ss_stims.stimulus[stim_index]
 	}
 }
 
@@ -279,6 +288,7 @@ Animates second stage choice, similarly to get_first_selected
 var get_second_selected = function() {
 	var second_stage_trial = jsPsych.data.getLastTrialData()
 	var choice = choices.indexOf(second_stage_trial.key_press)
+	console.log("sec - "+ choice);
 	if (choice != -1) {
 		second_selected = stim_ids[choice]
 		var second_notselected = stim_ids[1 - choice]
@@ -374,7 +384,7 @@ var performance_var = 0
 // task specific variables
 var total_score = 0 //track performance
 var practice_trials_num = 1
-var test_trials_num = 4
+var test_trials_num = 20
 var stim_ids = [] //Tracks the ids of the last chosen stims.
 var current_trial = -1
 var first_selected = -1 //Tracks the ID of the selected fs stimulus
@@ -387,7 +397,7 @@ var FB_matrix = initialize_FB_matrix() //tracks the reward probabilities for the
 var exp_stage = 'practice'
 
 // Actions go or no-go
-var choices_1 = [-1,37,39]
+var choices_1 = []
 // Actions for left and right
 var choices = [37, 39]
 var stim_side = ['decision-left', 'decision-right']
@@ -663,7 +673,7 @@ var first_stage = {
 	show_response: true,
 	timing_post_trial: 0,
 	response_ends_trial: false,
-	stage : 1,
+	// stage : 1,
 	data: {
 		trial_id: 'first_stage'
 	},
@@ -707,6 +717,7 @@ var second_stage = {
 	timing_response: 2000,
 	response_ends_trial: true,
 	timing_post_trial: 0,
+	// stage: 2,
 	on_finish: function() {
 		jsPsych.data.addDataToLastTrial({
 			exp_stage: exp_stage,
