@@ -207,8 +207,11 @@ Also updates the global variables choice, first_selected and first_notselected, 
 */
 var get_first_selected = function() {
 	var first_stage_trial = jsPsych.data.getLastTrialData()
+	var i = first_stage_trial.key_press;
+	console.log(" i = "+i);
+	console.log("  = "+i);
 	var choice = choices.indexOf(first_stage_trial.key_press)
-	if (choice != -1) {
+	if (i == 37 && stim_ids[0] == 1 || i == 39 && stim_ids[0] == 0) {
 		first_selected = stim_ids[choice]
 		var first_notselected = stim_ids[1 - choice]
 		jsPsych.data.addDataToLastTrial({
@@ -220,7 +223,9 @@ var get_first_selected = function() {
 			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
 			"; '>" +
 			"<img class = 'decision-stim  *2fade' src= '" + curr_images[first_notselected] + "'></div>"
-		} else if(choice == -1){
+
+
+		} else if(i == -1){
 					if(stim_ids[0] == 0){
 						first_selected = stim_ids[0]
 						var first_notselected = stim_ids[1 - 0]

@@ -51,19 +51,19 @@ jsPsych.plugins["poldrack-single-stim"] = (function() {
         id: 'jspsych-poldrack-single-stim-stimulus'
       }));
     }
-    //
+    /*
     try {
       console.log("pold "+(trial.stimulus)[1][0]);
       if (((trial.stimulus)[1][0] == 1)){
-          trial.choices = [-1,37];
+          trial.choices = [37];
        } else if (((trial.stimulus)[1][0] == 0)) {
-          trial.choices = [-1,39];
+          trial.choices = [39];
       }else{
         trial.choices = [37,39];
       }
     }
     catch{}
-
+    */
 
 
     //show prompt if there is one
