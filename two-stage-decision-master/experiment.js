@@ -219,7 +219,7 @@ var get_first_selected = function() {
 			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
 			"; '>" +
-			"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
+			"<img class = 'decision-stim  *2fade' src= '" + curr_images[first_notselected] + "'></div>"
 		} else if(choice == -1){
 					if(stim_ids[0] == 0){
 						first_selected = stim_ids[0]
@@ -274,7 +274,7 @@ var choose_second_stage = function() {
 		var stim_index = stage_index + Math.round(Math.random())
 		stim_ids = curr_ss_stims.stim_order[stim_index]
 		return "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
+		//*S**Y*	"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 			curr_ss_stims.stimulus[stim_index]
 		 //*S* "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
 			//*S*	"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
