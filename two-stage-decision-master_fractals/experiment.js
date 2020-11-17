@@ -420,25 +420,14 @@ var curr_colors = practice_colors
 
 //The first two stims are first-stage stims.
 //The next four are second-stage
-// var test_images = jsPsych.randomization.repeat(
-// 	["images/11.png",
-// 		"images/12.png",
-// 		"images/13.png",
-// 		"images/14.png",
-// 		"images/15.png",
-// 		"images/16.png",
-// 	], 1)
-var test_images =
-
-		[
-			"stimulus/orange_boat_left.png",
-			"stimulus/green_boat_right.png",
-			"stimulus/blue_shell_1.png",
-			"stimulus/blue_shell_2.png",
-			"images/15.png",
-			"images/16.png",
-
-		]
+var test_images = jsPsych.randomization.repeat(
+	["images/11.png",
+		"images/12.png",
+		"images/13.png",
+		"images/14.png",
+		"images/15.png",
+		"images/16.png",
+	], 1)
 
 var practice_images = jsPsych.randomization.repeat(
 	["images/80.png",
