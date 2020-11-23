@@ -132,7 +132,7 @@ Generate first stage stims. Takes in an array of images and colors (which change
 */
 var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
-		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+		stimulus: "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
@@ -141,7 +141,7 @@ var get_fs_stim = function(images, colors) {
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
 		stim_order: [0, 1]
 	}, {
-		stimulus: "<img class = 'background_images' src= '" + background_Image +"'> </img></div>"+
+		stimulus: "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
@@ -158,19 +158,23 @@ Generate second stage stims. Takes in an array of images and colors (which chang
 */
 var get_ss_stim = function(images, colors) {
 	var ss_stim_array = [
-		["<div class = decision-left style='background:" + colors[1] + "; '>" +
+		["<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
+			"<div class = decision-left style='background:" + colors[1] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[2] + "'></img></div>" +
 			"<div class = decision-right style='background:" + colors[1] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[3] + "'></img></div>",
+			"<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
 			"<div class = decision-left style='background:" + colors[1] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[3] + "'></img></div>" +
 			"<div class = decision-right style='background:" + colors[1] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[2] + "'></img></div>"
 		],
-		["<div class = decision-left style='background:" + colors[2] + "; '>" +
+		["<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
+			"<div class = decision-left style='background:" + colors[2] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[4] + "'></img></div>" +
 			"<div class = decision-right style='background:" + colors[2] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[5] + "'></img></div>",
+			"<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
 			"<div class = decision-left style='background:" + colors[2] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[5] + "'></img></div>" +
 			"<div class = decision-right style='background:" + colors[2] + "; '>" +
@@ -217,7 +221,8 @@ var get_first_selected = function() {
 		jsPsych.data.addDataToLastTrial({
 			stim_selected: first_selected
 		})
-		return "<div class = 'selected " + stim_side[choice] + "' style='background:" + curr_colors[0] +
+		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		"<div class = 'selected " + stim_side[choice] + "' style='background:" + curr_colors[0] +
 			"; '>" +
 			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
@@ -229,7 +234,8 @@ var get_first_selected = function() {
 					if(stim_ids[0] == 0){
 						first_selected = stim_ids[0]
 						var first_notselected = stim_ids[1 - 0]
-						return "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 							"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
@@ -238,7 +244,8 @@ var get_first_selected = function() {
 					}else{
 						first_selected = stim_ids[1]
 						var first_notselected = stim_ids[0]
-						return "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
+						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						 "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
 							"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
@@ -293,7 +300,12 @@ Animates second stage choice, similarly to get_first_selected
 var get_second_selected = function() {
 	var second_stage_trial = jsPsych.data.getLastTrialData()
 	var choice = choices.indexOf(second_stage_trial.key_press)
-	console.log("stim_ids- "+ stim_ids);
+	// console.log("stim_ids- "+ stim_ids);
+	if (stim_ids[0] == 2 || stim_ids[0] == 3 ){
+		var background = background_Image_stage_2_green
+	}else {
+		var background = background_Image_stage_2_purpel
+	}
 	if (choice != -1) {
 		second_selected = stim_ids[choice]
 		var second_notselected = stim_ids[1 - choice]
@@ -341,6 +353,7 @@ Otherwise, check the FB_matrix which determines the reward probabilities for eac
 After FB, the FB_atrix is updated.
 */
 var get_feedback = function() {
+<<<<<<< HEAD
 	console.log("second_selected"+ (second_selected - 2));
 	console.log("FB_selected ="+ FB_matrix[second_selected - 2]);
 	console.log("FB_selected="+ (FB_matrix[second_selected - 2][current_trial]) );
@@ -361,15 +374,47 @@ var get_feedback = function() {
 		//
 		return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
 		 //*S*	"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+=======
+	console.log("stim_ids " +stim_ids)
+	if (second_selected == -1) {
+		return "<div class = centerbox><div class = center-text>" +
+			"Please respond faster!</div></div>"
+	} else if (Math.random() < FB_matrix[second_selected - 2]) {
+		var fb_img = 0
+		var bg_imf = 0
+		update_FB();
+		FB = 1
+		total_score += 1
+		if (stim_ids[0] == 2 || stim_ids[0] == 3){
+				fb_img = terminal_state_img[0]
+				bg_img = background_Image_stage_2_green
+		}else{
+				fb_img = terminal_state_img[2]
+				bg_img = background_Image_stage_2_purpel
+		}
+		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
+						"<img  class = 'decision-stim' src ='" + fb_img + "'></div>"
+
+		//return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
+
+	   //*S*	"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+>>>>>>> 31df187631c61123835ac539b21ddd85bd321c77
 		//*S*	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
 
 	} else {
 	//	update_FB();
 		FB = 0
-		// return "<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
-		// 	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
-		// 	"<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:60px'>0</p></div>"
-		return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
+		if (stim_ids[0] == 2 ||stim_ids[0] == 3){
+			 	fb_img = terminal_state_img[1]
+				bg_img = background_Image_stage_2_green
+		}else{
+				fb_img = terminal_state_img[3]
+				bg_img = background_Image_stage_2_purpel
+		}
+
+		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
+						"<img  class = 'decision-stim' src ='" + fb_img + "'> </div>"
+		// return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
 		  //*S*"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
 			//*S* "<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
 	}
@@ -434,8 +479,7 @@ var choices_1 = []
 var choices = [37, 39]
 var stim_side = ['decision-left', 'decision-right']
 var stim_move = ['selected-left', 'selected-right']
-//*S* set background Image
-var background_Image = "stimulus/blue_shell_1.png"
+
 // Set up colors
 // var test_colors = jsPsych.randomization.shuffle(['#98bf21', '#FF9966', '#C2C2FF'])
 // var practice_colors = jsPsych.randomization.shuffle(['#F1B8D4', '#CCFF99', '#E0C2FF'])
@@ -458,13 +502,12 @@ var curr_colors = practice_colors
 var test_images =
 
 		[
-			"stimulus/orange_boat_left.png",
-			"stimulus/green_boat_right.png",
-			"stimulus/blue_shell_1.png",
-			"stimulus/blue_shell_2.png",
-			"images/15.png",
-			"images/16.png",
-
+			"img_s_y/blue_boat_left.png",
+			"img_s_y/orange_boat_right.png",
+			"img_s_y/green_shell_1.png",
+			"img_s_y/green_shell_2.png",
+			"img_s_y/purpel_shell_1.png",
+			"img_s_y/purpel_shell_2.png",
 		]
 
 var fb_images = [
@@ -482,12 +525,26 @@ var practice_images = jsPsych.randomization.repeat(
 		"images/85.png",
 	], 1)
 
+	//*S* set background Image
+var background_Image_stage_1 = "img_s_y/background_1.png"
+var background_Image_stage_2_green = "img_s_y/green_background.png"
+var background_Image_stage_2_purpel = "img_s_y/purple_background.png"
+
+var terminal_state_img = ["img_s_y/green_pearl.png",
+											"img_s_y/green_no_pearl.png",
+											"img_s_y/purpel_pearl.png",
+											"img_s_y/purple_no_pearl.png"
+											]
+
 var strategy_stim = ["stimulus/right_arrow_white.png","stimulus/left_arrow_white.png","stimulus/no_go_white.png"]
 
 //Preload images
 jsPsych.pluginAPI.preloadImages(practice_images)
 jsPsych.pluginAPI.preloadImages(test_images)
-jsPsych.pluginAPI.preloadImages(background_Image)
+jsPsych.pluginAPI.preloadImages(background_Image_stage_1)
+jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
+jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
+jsPsych.pluginAPI.preloadImages(terminal_state_img)
 
 
 var curr_images = practice_images
