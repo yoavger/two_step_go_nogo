@@ -37,7 +37,7 @@
 
 .decision-stim {
   display: block;
-  height: 18vw;
+  height: 16vw;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -124,4 +124,57 @@
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   color: white;
+}
+
+.FB-stim {
+    display: block;
+    height: 30vw;
+  	position:absolute;
+  	top:50%;
+  	left:50%;
+  	transform: translate(-50%,-50%);
+}
+
+
+.decision-left-ss {
+	/* width: 30vw; */
+	height: 21vw;
+  position:absolute;
+  top:37%;
+  left:50%;
+  /* margin-right:-50%; */
+  transform: translate(-85%,-5%);
+}
+
+
+.decision-right-ss {
+	/* width: 30vw; */
+	height: 21vw;
+  position:absolute;
+  top:37%;
+  left:50%;
+  /* margin-right:-50%; */
+  transform: translate(-10%,-5%);
+}
+
+
+.decision-left-sss {
+	/* width: 30vw; */
+	height: 21vw;
+  position:absolute;
+  top:37%;
+  left:50%;
+  /* margin-right:-50%; */
+  /* transform: translate(-50%,-5%); */
+}
+
+
+.decision-right-sss {
+	/* width: 30vw; */
+	height: 21vw;
+  position:absolute;
+  top:37%;
+  left:50%;
+  /* margin-right:-50%; */
+  /* transform: translate(0%,-5%); */
 }
