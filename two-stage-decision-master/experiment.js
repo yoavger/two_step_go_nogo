@@ -391,10 +391,10 @@ var get_second_selected = function() {
 		return "<img class = 'background_images' src= '" + background +"'> </img></div>"+
 		"<div class = '" + stim_side[choice] + " selected' style='background:" + curr_colors[
 				stage + 1] + "; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+			"<img class = 'decision-sss' src= '" + curr_images[second_selected] + "'></div>" +
 			"<div class = 'fade " + stim_side[1 - choice] + "' style='background:" + curr_colors[stage + 1] +
 			"; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[second_notselected] + "'></div>"
+			"<img class = 'decision-sss' src= '" + curr_images[second_notselected] + "'></div>"
 	} else {
 		second_selected = -1
 		jsPsych.data.addDataToLastTrial({
