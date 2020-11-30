@@ -239,27 +239,56 @@ var get_first_selected = function() {
 	var first_stage_trial = jsPsych.data.getLastTrialData()
 	var i = first_stage_trial.key_press;
 	var choice = choices.indexOf(first_stage_trial.key_press)
-
-	if (i == 37 && stim_ids[0] == 1 || i == 39 && stim_ids[0] == 0) {
-	
+	console.log("choice first = " + stim_ids)
+	if (i == 37 && stim_ids[0] == 1 || i == 39 && stim_ids[0] == 0){
+		var sum = stim_ids[0] + stim_ids[1]
 		first_selected = stim_ids[choice]
 		var first_notselected = stim_ids[1 - choice]
 		jsPsych.data.addDataToLastTrial({
 			stim_selected: first_selected
 		})
-		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-		"<div class = 'selected " + stim_side[choice] + "' style='background:" + curr_colors[0] +
-			"; '>" +
-			"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
-			"<div class = '" + stim_side[1 - choice] + " fade' style='background:" + curr_colors[0] +
-			"; '>" +
-			"<img class = 'decision-stim  *2fade' src= '" + curr_images[first_notselected] + "'></div>"
+		if ( sum == 2 || sum == 0 ){
+			if (stim_ids[0] == 1){
+			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+				"; '>" +
+				"<img class = 'decision-stim' src= '" + curr_images[0] + "'></div>" +
+				"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
+				"; '>" +
+				"<img class = 'decision-stim  *2fade' src= '" + curr_images[1] + "'></div>"
+			}else {
+				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim' src= '" + curr_images[1] + "'></div>" +
+					"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim  *2fade' src= '" + curr_images[0] + "'></div>"
+			}
+		}else {
+			if (stim_ids[0] == 1){
+				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim' src= '" + curr_images[6] + "'></div>" +
+					"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim  *2fade' src= '" + curr_images[7] + "'></div>"
+			}else {
+				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim' src= '" + curr_images[7] + "'></div>" +
+					"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
+					"; '>" +
+					"<img class = 'decision-stim  *2fade' src= '" + curr_images[6] + "'></div>"
+			}
 
-
-		} else if(i == -1){
-					if(stim_ids[0] == 0){
-						first_selected = stim_ids[0]
-						var first_notselected = stim_ids[1 - 0]
+		}
+		}else if(i == -1){
+					if(stim_ids[0] == 0 && stim_ids[1] == 0){
+						first_selected = 0
+						var first_notselected = 1
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 						"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 							"; '>" +
@@ -267,9 +296,9 @@ var get_first_selected = function() {
 							"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
-					}else{
-						first_selected = stim_ids[1]
-						var first_notselected = stim_ids[0]
+					}else if (stim_ids[0] == 1 && stim_ids[1] == 1) {
+						first_selected = 1
+						var first_notselected = 0
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 						 "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 							"; '>" +
@@ -277,14 +306,36 @@ var get_first_selected = function() {
 							"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim  fade' src= '" + curr_images[first_notselected] + "'></div>"
-					}
-	}else {
+					}else if (stim_ids[0] == 1 && stim_ids[1] == 0){
+						first_selected = 1
+						var first_notselected = 0
+						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						 "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim' src= '" + curr_images[7] + "'></div>" +
+							"<div class = '" + stim_side[0] + " fade' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim  fade' src= '" + curr_images[6] + "'></div>"
+					}else{
+						first_selected = 0
+						var first_notselected = 1
+						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						 "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim' src= '" + curr_images[6] + "'></div>" +
+							"<div class = '" + stim_side[1] + " fade' style='background:" + curr_colors[0] +
+							"; '>" +
+							"<img class = 'decision-stim  fade' src= '" + curr_images[7] + "'></div>"
+						}
+		}else{
 		first_selected = -1
 		jsPsych.data.addDataToLastTrial({
 			stim_selected: first_selected
 		})
 	}
 }
+
+
 
 /*
 The second stage is probabilistically chosen based on the first stage choice. Each of the first stage stimulus is primarily associated

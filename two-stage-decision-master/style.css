@@ -11,7 +11,8 @@
 .selected{
 /*	-webkit-animation: movetop 1s forwards; */
 /*	animation: movetop 1s forwards; */
-	border: 14px dashed white;
+	border: 8px 
+  dashed white;
 }
 
 
