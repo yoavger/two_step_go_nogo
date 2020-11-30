@@ -1,0 +1,19 @@
+{
+    "name": "BIS: Barratt Impulsiveness Scale Survey",
+    "template":"survey",
+    "exp_id": "starter",
+    "url": "",
+    "cognitive_atlas_task_id": "0",
+    "contributors": [
+        "Nitzan Shahar",
+        "Maayan Pereg",
+        "Noa Kohavi",
+        "Yaniv Davidi"
+       
+            ], 
+    "time":3,
+    "reference": [],  
+    "description": "BIS",
+    "instructions": "Please answer the following questions to the best of your ability"
+  
+}

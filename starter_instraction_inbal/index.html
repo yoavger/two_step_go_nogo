@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class=''>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <title>The Experiment Factory: Survey</title>
+    
+    <link rel='stylesheet' type='text/css' href='css/material.blue-red.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/surveys.css'>
+    <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.4.custom.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <style>h3 {width: 100%;} button[name=process]:enabled { visibility: visible }</style>
+</head>
+
+<body>
+
+    <script src='js/jquery-2.1.1.min.js'></script>
+    <script src='js/material.min.js'></script>
+    <script src='js/jquery-ui-1.10.4.custom.min.js'></script>
+    <script src='js/jquery.wizard.js'></script>
+    <script src='js/jquery.form-3.50.js'></script>
+    <script src='js/jquery.validate-1.12.0.min.js'></script>
+
+<div class="experiment-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+<div class="experiment-ribbon"></div>
+<main class="experiment-main mdl-layout__content">
+<div class="experiment-container mdl-grid">
+<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+</div>
+<div class="experiment-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+
+<div id="questions">
+
+<form name="questions" action="#", method="POST">
+<div class="step">
+    <h2 style="text-decoration: underline;text-align: center;font-size: 22px;">Card Game</h2>
+<h3>Welcome to our card game. Your winnings will earn you additional payment bonus for the study. If no money will be earned in the card game, you will still get £2.5 for completing the study.  However, you can gain up to £5 overall based on winnings in the game. 
+<br>
+We will now provide instructions regarding the card game. Please read them carefully. You can freely go back and forth between the screens. At the end of the instructions we will ask you to complete a short test, to make sure everything is well understood. 
+<br><br>
+Good luck and thank you for participating!
+<br><br>
+<img src="imgs/1.png" style="max-width:350px" /></h3><br><br><br><br></div>
+<div class="step">
+<h3>Below is an example of a card-deck of four cards, very much like the cards in the game to follow. Each card-deck in the game consists of four cards.<br><br>
+<img src="imgs/2.png" style="
+  display: block;
+  margin-left: auto;
+  margin-right: auto;" /> </h3><br><br><br><br></div>
+<div class="step">
+<h3>On each step, only two cards from the deck will be offered (as shown in the example below). 
+<br>You will be able to select a card using a RIGHT ('K') or LEFT ('S') key-press. 
+<br>Please do your best to respond as fast and accurate as you can.<br><br><img src="imgs/3.png" style="
+  display: block;
+  margin-left: auto;
+  margin-right: auto;" /></h3><br><br><br><br></div>
+<div class="step">
+<h3>After selecting the card, you will see an outcome in the middle of the screen, as shown below. The outcome very much depends on the card you chose. Some cards in the deck are better than others. Your job is to find out which card is the best in the deck at any time and choose it. Two important things to remember:<br><br>1. How good a card is can change along the game, somewhat similar to the value of market products that sometimes worth more and sometimes less. <br>2. Only the cards predict an outcome. The response key that was used to select a card does not influence the chances of winning. <img src="imgs/4.png" style="
+  display: block;
+  margin-left: auto;
+  margin-right: auto;" /></h3><br><br><br><br></div>
+<div class="step">
+<h3>Finally, the game includes two types of card decks. 
+<br>
+'Good’ decks, indicated by a green frame, can only lead to an additional game-coin or to no coin.
+<br>
+<img src="imgs/5.png" />
+
+<br><Br>
+‘Bad’ decks, indicated by a red frame, can only lead to a loss of a game-coin or to no-coin.
+
+
+<br>
+<img src="imgs/6.png" />
+
+<br><br>
+Your job is to find out which is the best card in the deck and choose it in order to gain as much game-coins or, alternatively, to lose as little game-coins ,as possible - depending on the type of deck (green or red). How much you win or lose is very much up to you! </h3><br><br><br><br></div>
+<div class="step">
+<h3>At the start of the card game, we will first provide you with 100 game-coins. In the end of the experiment, these will be exchanged to a bonus of up to £2.5. You will only be able to see your overall winnings in the end of the experiment. 
+<br><br>On every step, try to be focused and find the card that is more likely to earn you a coin or, alternatively, less likely to take a coin from you.
+<br><br>
+You will now move on to a quick test to make sure that you understood the instructions. You can use the previous button the read again through the instructions, in case you need to. 
+</h3><br><br><br><br></div>
+<div class="step">
+<h3>We would now like to ask you to complete a quick test to make sure all the instructions are well understood.
+<br>You can use the previous button to read again through the instructions, if you are not sure regarding some questions. Note that in order 
+to continue with the experiment you need to answer all the questions correctly.</h3><br><br><br><br>
+<p id="starter_7_options" class="likert">1) What is the size of a card deck?</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_7_0">
+<input type="radio" id="option-starter_7_0" class="mdl-radio__button required page7" name="starter_7_options" value="2" meta-options="2|4|6" meta-text="1) What is the size of a card deck?">
+<span class="mdl-radio__label">2</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_7_1">
+<input type="radio" id="option-starter_7_1" class="mdl-radio__button required page7" name="starter_7_options" value="4" meta-options="2|4|6" meta-text="1) What is the size of a card deck?">
+<span class="mdl-radio__label">4</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_7_2">
+<input type="radio" id="option-starter_7_2" class="mdl-radio__button required page7" name="starter_7_options" value="6" meta-options="2|4|6" meta-text="1) What is the size of a card deck?">
+<span class="mdl-radio__label">6</span>
+</label><br><br><br><br>
+<p id="starter_8_options" class="likert">2) How many cards are presented on each step?</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_8_0">
+<input type="radio" id="option-starter_8_0" class="mdl-radio__button required page7" name="starter_8_options" value="2" meta-options="2|4|6" meta-text="2) How many cards are presented on each step?">
+<span class="mdl-radio__label">2</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_8_1">
+<input type="radio" id="option-starter_8_1" class="mdl-radio__button required page7" name="starter_8_options" value="4" meta-options="2|4|6" meta-text="2) How many cards are presented on each step?">
+<span class="mdl-radio__label">4</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_8_2">
+<input type="radio" id="option-starter_8_2" class="mdl-radio__button required page7" name="starter_8_options" value="6" meta-options="2|4|6" meta-text="2) How many cards are presented on each step?">
+<span class="mdl-radio__label">6</span>
+</label><br><br><br><br>
+<p id="starter_9_options" class="likert">3) How do you choose a card?</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_9_0">
+<input type="radio" id="option-starter_9_0" class="mdl-radio__button required page7" name="starter_9_options" value="2" meta-options="Click on it|Press the 'S' or 'K' key with your LEFT or RIGHT hand|Press the LEFT or RIGHT arrow keys" meta-text="3) How do you choose a card?">
+<span class="mdl-radio__label">Click on it</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_9_1">
+<input type="radio" id="option-starter_9_1" class="mdl-radio__button required page7" name="starter_9_options" value="4" meta-options="Click on it|Press the 'S' or 'K' key with your LEFT or RIGHT hand|Press the LEFT or RIGHT arrow keys" meta-text="3) How do you choose a card?">
+<span class="mdl-radio__label">Press the 'S' or 'K' key with your LEFT or RIGHT hand</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_9_2">
+<input type="radio" id="option-starter_9_2" class="mdl-radio__button required page7" name="starter_9_options" value="6" meta-options="Click on it|Press the 'S' or 'K' key with your LEFT or RIGHT hand|Press the LEFT or RIGHT arrow keys" meta-text="3) How do you choose a card?">
+<span class="mdl-radio__label">Press the LEFT or RIGHT arrow keys</span>
+</label><br><br><br><br>
+<p id="starter_10_options" class="likert">4) Which card deck can lead you to the <b>winning of a game-coin</b>?</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_10_0">
+<input type="radio" id="option-starter_10_0" class="mdl-radio__button required page7" name="starter_10_options" value="2" meta-options="A green deck|A red deck|Both red and green decks" meta-text="4) Which card deck can lead you to the <b>winning of a game-coin</b>?">
+<span class="mdl-radio__label">A green deck</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_10_1">
+<input type="radio" id="option-starter_10_1" class="mdl-radio__button required page7" name="starter_10_options" value="4" meta-options="A green deck|A red deck|Both red and green decks" meta-text="4) Which card deck can lead you to the <b>winning of a game-coin</b>?">
+<span class="mdl-radio__label">A red deck</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_10_2">
+<input type="radio" id="option-starter_10_2" class="mdl-radio__button required page7" name="starter_10_options" value="6" meta-options="A green deck|A red deck|Both red and green decks" meta-text="4) Which card deck can lead you to the <b>winning of a game-coin</b>?">
+<span class="mdl-radio__label">Both red and green decks</span>
+</label><br><br><br><br>
+<p id="starter_11_options" class="likert">5) Which card deck can lead you to a no-coin outcome?</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_11_0">
+<input type="radio" id="option-starter_11_0" class="mdl-radio__button required page7" name="starter_11_options" value="2" meta-options="A green deck|A red deck|Both red and green decks" meta-text="5) Which card deck can lead you to a no-coin outcome?">
+<span class="mdl-radio__label">A green deck</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_11_1">
+<input type="radio" id="option-starter_11_1" class="mdl-radio__button required page7" name="starter_11_options" value="4" meta-options="A green deck|A red deck|Both red and green decks" meta-text="5) Which card deck can lead you to a no-coin outcome?">
+<span class="mdl-radio__label">A red deck</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_11_2">
+<input type="radio" id="option-starter_11_2" class="mdl-radio__button required page7" name="starter_11_options" value="6" meta-options="A green deck|A red deck|Both red and green decks" meta-text="5) Which card deck can lead you to a no-coin outcome?">
+<span class="mdl-radio__label">Both red and green decks</span>
+</label><br><br><br><br>
+<p id="starter_12_options" class="likert">6) Some cards are better than others.</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_12_0">
+<input type="radio" id="option-starter_12_0" class="mdl-radio__button required page7" name="starter_12_options" value="2" meta-options="True|False" meta-text="6) Some cards are better than others.">
+<span class="mdl-radio__label">True</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_12_1">
+<input type="radio" id="option-starter_12_1" class="mdl-radio__button required page7" name="starter_12_options" value="4" meta-options="True|False" meta-text="6) Some cards are better than others.">
+<span class="mdl-radio__label">False</span>
+</label><br><br><br><br>
+<p id="starter_13_options" class="likert">7) How 'good' or 'bad' a card is will not change along the game.</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_13_0">
+<input type="radio" id="option-starter_13_0" class="mdl-radio__button required page7" name="starter_13_options" value="2" meta-options="True|False" meta-text="7) How 'good' or 'bad' a card is will not change along the game.">
+<span class="mdl-radio__label">True</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_13_1">
+<input type="radio" id="option-starter_13_1" class="mdl-radio__button required page7" name="starter_13_options" value="4" meta-options="True|False" meta-text="7) How 'good' or 'bad' a card is will not change along the game.">
+<span class="mdl-radio__label">False</span>
+</label><br><br><br><br>
+<p id="starter_14_options" class="likert">8) The outcome you might get very much depends on whether you used the RIGHT or LEFT response key.</p>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_14_0">
+<input type="radio" id="option-starter_14_0" class="mdl-radio__button required page7" name="starter_14_options" value="2" meta-options="True- both cards and response keys predict the outcome|False- only cards predict the outcome." meta-text="8) The outcome you might get very much depends on whether you used the RIGHT or LEFT response key.">
+<span class="mdl-radio__label">True- both cards and response keys predict the outcome</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-starter_14_1">
+<input type="radio" id="option-starter_14_1" class="mdl-radio__button required page7" name="starter_14_options" value="4" meta-options="True- both cards and response keys predict the outcome|False- only cards predict the outcome." meta-text="8) The outcome you might get very much depends on whether you used the RIGHT or LEFT response key.">
+<span class="mdl-radio__label">False- only cards predict the outcome.</span>
+</label><br><br><br><br></div>
+<div class="step">
+<h3>Good job! You completed the test. 
+Before we start the  games, we will give you two short practice sessions.
+</h3><br><br><br><br></div>
+
+<div class="navigation">
+    <style>button[name=backward]:enabled { visibility: visible; } </style>
+<button type="button" style="float:left" 
+                    name="backward" 
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent backward">Previous</button>
+
+    <button type="button"  style="float: right;"
+                    name="forward" 
+                    class="forward mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Next</button>
+    <button type="submit" 
+                    name="process" 
+                    class="submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Next</button>
+</div>
+
+<div class="pad">
+    <div id="progressbar"></div>
+</div>
+</form>
+</div>
+<div id="failed" style="display: none; position: absolute; top:0; bottom: 0; right:0; left:0; z-index: 9999999999; background-color: black; padding-top: 140px; text-align:center;font-size: 23px; color:white">
+    Sorry. You made a mistake.<br/>
+Let’s go back to the instructions. <br/>
+Please read them carefully before submitting your answers.<br/><br/>
+
+Thank you!
+<br><br><br><button id="close1" style="visibility: visible;
+    float: right;
+    margin-right: 25%;" class="submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Back to instructions</button>
+</div>
+<script>
+$( document ).ready(function() {
+
+$('#close1').on('click', function() {
+    $('#failed').css('display','none')
+})
+    expfactory_finished = false;
+
+    // Basic wizard with progress bar
+    $( "#progressbar" ).progressbar();
+    $( "#questions" ).wizard({
+        stepsWrapper: "#wrapped",
+	submit: ".submit",
+	beforeForward: function( event, state ) {
+
+            // Function to add message that answer is required
+            function is_required(elements){
+                var missing = false;
+                elements.each(function(index,element){
+                    var pid = "#" + $(element).attr("name")
+                    $(pid).css("color","red")
+                    missing = true;                   
+                });
+
+                if (missing == true){
+                   // alert("Please answer all required questions in red.");
+                }
+            }
+
+             if ( state.stepIndex === 7 ) {
+
+ if (($.unique($(`.page7.required[type=number],.page7.required:text`).map(function(){return $(this).attr(`meta-text`)})).map(function() {return $(`[meta-text*="` + this + `"].required[type=number], [meta-text*="` + this + `"].required:text`).filter(function() { return $(this).val();}).length > 0}).get().indexOf(false) != -1) || ($.unique($(`.page7.required:not([type=number]):not(:text)`).map(function(){return $(this).attr(`meta-text`)})).map(function() {return $(`[meta-text*="` + this + `"].required:checked`).length > 0}).get().indexOf(false) != -1)){
+is_required($(`.page7.required:not(checked)`));
+return false;
+ } else {
+if ($("#option-starter_7_1").is(':checked') && 
+    $("#option-starter_8_0").is(':checked') && 
+    $("#option-starter_9_1").is(':checked') && 
+    $("#option-starter_10_0").is(':checked') && 
+    $("#option-starter_11_2").is(':checked') && 
+    $("#option-starter_12_0").is(':checked') && 
+    $("#option-starter_13_1").is(':checked') && 
+    $("#option-starter_14_1").is(':checked')) {
+expfactory_finished=true;
+} else {
+$('#failed').css('display','block')
+    $('input:checked').prop('checked', false);
+    $('.is-checked').removeClass('is-checked');
+    $('.likert').css('color', 'white');
+    $('button[name=backward]:enabled').remove();
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+    $( "#questions" ).wizard("backward")
+console.log('here');return false;
+}
+
+}}
+
+	    return !!$( this ).wizard( "form" ).valid();
+        },
+	afterSelect: function( event, state ) {
+	    $( "#progressbar" ).progressbar( "value", state.percentComplete );
+            if (expfactory_finished == true){
+                $(".submit").enable();
+            }
+        }
+
+    // Form submission
+    }).wizard( "form" ).submit(function( event ) {
+
+        event.preventDefault();
+        
+        var $inputs = $("input:checked");
+        var $text = $("input:text")
+        var $number = $("input[type = number]")
+        var $elements = $inputs.add($text).add($number)
+        
+        // Prepare data results
+        var results = []
+        $elements.each(function(index, element) {
+            var result = {}
+
+            if ($.inArray( $(element).attr("name"), [ "forward", "backward", "process"] ) == -1) {
+                result.name = $(element).attr("name");
+                if ($(element).attr("value") == undefined) {
+                    result.value = $(element).val();
+                } else {
+                    result.value = $(element).attr("value");
+                }
+                result.options = $(element).attr("meta-options");
+                result.text = $(element).attr("meta-text");
+                results.push(result);
+             }
+        })
+
+        
+        $.ajax({
+
+                type: 'POST',
+                url: '/save',
+                data: {'data': {'polific-id': localStorage.polific}},
+
+                success: function() {
+                    console.log('success');
+                    document.location = '/next'
+                 },
+
+                 // Endpoint not running, local save
+                 error: function(err) {
+
+                     if (err.status == 200) {
+                        document.location = '/next'
+                     }        
+        
+                     console.log("Error with POST" + err.status + ", downloading to local file.")
+                     // Save data to browser
+
+                     var data = "text/json;charset=utf-8," + JSON.stringify(results);
+                     var a = document.createElement('a');
+                     a.title = "Download"
+                     a.id = "download"
+                     a.type = "button"
+                     a.download = 'starter_result.json';
+                     a.href = 'data:' + data;
+                     $(".submit").html("Download")
+                     $(".submit").click(function(){
+                         $("body").append(a)
+                         a.click()
+                     })
+
+                  }
+         });
+
+     // Validation
+     }).validate({
+	errorPlacement: function( error, element ) {
+	    if ( element.is( ":radio" ) || element.is( ":checkbox" ) ) {
+		error.insertBefore( element.next() );
+            } else {
+	        error.insertAfter( element );
+	 }
+      }
+  });
+
+
+
+});
+</script>
+<style>form p.likert:before { width: 580px !important; }</style>
+<link rel='stylesheet' type='text/css' href='https://shahar-lab-exp.com/static/css/shahar-lab-vertical-black.css?v=2'>
+<script type="text/javascript">
+    $('button[name=forward]').on('click', function(e) {
+      $('.experiment-layout')[0].scrollTo(0, 0);
+    });
+</script>
+<script type="text/javascript">
+  // const interval = setInterval(() => {
+  //   if ($('[name=process]:enabled').length){
+  //     $('[name=process]:enabled').trigger('click');
+  //     clearInterval(interval);
+  //   }
+  // }, 100);
+</script>
+</body>
+</html>
