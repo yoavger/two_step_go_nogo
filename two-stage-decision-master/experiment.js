@@ -1185,7 +1185,10 @@ var noFB_node = {
 
 var fixation = {
 	type: 'poldrack-single-stim',
-	stimulus: '<div class = centerbox><div class = fixation>+</div></div>',
+	//*S* stimulus: '<div class = centerbox><div class = fixation>+</div></div>',
+	//*S* is_html: true,
+	stimulus:	"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+	'<div class = centerbox><div class = fixation>+</div></div>',
 	is_html: true,
 	choices: 'none',
 	data: {
