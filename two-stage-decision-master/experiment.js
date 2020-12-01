@@ -427,7 +427,13 @@ Otherwise, check the FB_matrix which determines the reward probabilities for eac
 After FB, the FB_atrix is updated.
 */
 var get_feedback = function() {
-	// console.log("stim_ids " +stim_ids)
+	 console.log("second_selected = " + second_selected)
+	 console.log("second_selected = " + (second_selected-2))
+	 console.log("current_trial = " + current_trial)
+	 console.log("prob = " + FB_matrix[second_selected - 2][current_trial])
+	 console.log(FB_matrix[second_selected - 2])
+	 console.log(FB_matrix)
+
 	if (second_selected == -1) {
 		return "<div class = centerbox><div class = center-text>" +
 			"Please respond faster!</div></div>"
@@ -436,6 +442,7 @@ var get_feedback = function() {
 		var bg_imf = 0
 		// update_FB();
 		FB = 1
+		console.log("1")
 		total_score += 1
 		if (stim_ids[0] == 2 || stim_ids[0] == 3){
 				fb_img = terminal_state_img[0]
@@ -453,8 +460,9 @@ var get_feedback = function() {
 		//*S*	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
 
 	} else {
-		update_FB();
+	//	update_FB();
 		FB = 0
+		console.log("0")
 		if (stim_ids[0] == 2 ||stim_ids[0] == 3){
 			 	fb_img = terminal_state_img[1]
 				bg_img = background_Image_stage_2_green
@@ -759,7 +767,6 @@ var	FB_matrix2 = [];
 
 
 var FB_matrix = FB_matrix2 //assign rnwlk version 1 or 2
-
 if (Math.random() <= 0.5 ){
 	FB_matrix = FB_matrix1;
 }
