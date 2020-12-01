@@ -12,7 +12,8 @@
 /*	-webkit-animation: movetop 1s forwards; */
 /*	animation: movetop 1s forwards; */
 	border: 8px
-  dashed white;
+  dashed #ffff66;
+/*  dashed #000000;*/
 }
 
 
