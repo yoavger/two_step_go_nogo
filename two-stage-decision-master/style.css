@@ -11,7 +11,7 @@
 .selected{
 /*	-webkit-animation: movetop 1s forwards; */
 /*	animation: movetop 1s forwards; */
-	border: 8px
+	border: 3px
   dashed #ffff66;
 /*  dashed #000000;*/
 }
@@ -39,7 +39,7 @@
 
 .decision-stim {
   display: block;
-  height: 16vw;
+  height: 20vw;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -50,7 +50,7 @@
 	width: 18vw;
 	height: 18vw;
   position:absolute;
-  top:50%;
+  top:45%;
   left:50%;
   margin-right:-50%;
   transform: translate(-125%,-5%);
@@ -60,7 +60,7 @@
 	width: 18vw;
 	height: 18vw;
   position:absolute;
-  top:50%;
+  top:45%;
   left:50%;
   margin-right:-50%;
   transform: translate(25%,-5%);
@@ -92,7 +92,7 @@
   display: block;
   height: 10vw;
 	position:absolute;
-	top:-20%;
+	top:-25%;
 	left:50%;
 	transform: translate(-50%,-25%);
 }
@@ -139,34 +139,61 @@
 
 
 .decision-left-ss {
-	/* width: 30vw; */
-  display: block;
-	height: 20vw;
-  position:absolute;
-  top:30.5%;
-  left:18%;
-  /* margin-right:-50%; */
-  /* transform: translate(20%,0%); */
-}
-
-
-.decision-right-ss {
-	/* width: 30vw; */
-  display: block;
   height: 20vw;
   position:absolute;
-  top:30.5%;
-  left:44%;
-  /* margin-right:-50%; */
-  /* transform: translate(15%,0%); */
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-85%,-5%);
+}
+/* -80 bigger means go right*/
+
+.decision-right-ss {
+	height: 20vw;
+  position:absolute;
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-10%,-5%);
+}
+/* -10 smaller means go left*/
+
+.decision-left-sss_not {
+  height: 20vw;
+  position:absolute;
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-85%,-5%);
 }
 
+.decision-left-sss_yes {
+  height: 20vw;
+  position:absolute;
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-85%,-5%);
+  border: 3px
+  dashed #ffff66;
+}
 
-.decision-sss {
-  display: block;
-  height:20vw;
-	position:absolute;
-	top:37%%;
-	left:50%;
-	transform: translate(-50%,-50%);
+.decision-right-sss_not {
+	height: 20vw;
+  position:absolute;
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-10%,-5%);
+}
+
+.decision-right-sss_yes {
+  height: 20vw;
+  position:absolute;
+  top:35%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-10%,-5%);
+  border: 3px
+  dashed #ffff66;
 }
