@@ -139,61 +139,61 @@
 
 
 .decision-left-ss {
-  height: 20vw;
+  height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-85%,-5%);
+  transform: translate(-115%,-5%);
 }
 /* -80 bigger means go right*/
 
 .decision-right-ss {
-	height: 20vw;
+	height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-10%,-5%);
+  transform: translate(15%,-5%);
 }
 /* -10 smaller means go left*/
 
 .decision-left-sss_not {
-  height: 20vw;
+  height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-85%,-5%);
+  transform: translate(-115%,-5%);
 }
 
 .decision-left-sss_yes {
-  height: 20vw;
+  height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-85%,-5%);
+  transform: translate(-115%,-5%);
   border: 3px
   dashed #ffff66;
 }
 
 .decision-right-sss_not {
-	height: 20vw;
+  height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-10%,-5%);
+  transform: translate(15%,-5%);
 }
 
 .decision-right-sss_yes {
-  height: 20vw;
+  height: 16vw;
   position:absolute;
   top:35%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-10%,-5%);
+  transform: translate(15%,-5%);
   border: 3px
   dashed #ffff66;
 }
