@@ -90,11 +90,11 @@
 
 .strategy_stim {
   display: block;
-  height: 15vw;
+  height: 10vw;
 	position:absolute;
-	top:-40%;
+	top:-20%;
 	left:50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-25%);
 }
 
 .background_images {
@@ -141,30 +141,30 @@
 .decision-left-ss {
 	/* width: 30vw; */
   display: block;
-	height: 21vw;
+	height: 20vw;
   position:absolute;
-  top:37%;
-  left:50%;
+  top:30.5%;
+  left:18%;
   /* margin-right:-50%; */
-  transform: translate(-95%,10%);
+  /* transform: translate(20%,0%); */
 }
 
 
 .decision-right-ss {
 	/* width: 30vw; */
   display: block;
-  height: 21vw;
+  height: 20vw;
   position:absolute;
-  top:37%;
-  left:50%;
+  top:30.5%;
+  left:44%;
   /* margin-right:-50%; */
-  transform: translate(-5%,10%);
+  /* transform: translate(15%,0%); */
 }
 
 
 .decision-sss {
   display: block;
-  height: 21vw;
+  height:20vw;
 	position:absolute;
 	top:37%%;
 	left:50%;

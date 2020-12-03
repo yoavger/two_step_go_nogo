@@ -835,7 +835,7 @@ var terminal_state_img = ["img_s_y/green_pearl.png",
 											"img_s_y/purple_no_pearl.png"
 											]
 
-var strategy_stim = ["stimulus/right_arrow_white.png","stimulus/left_arrow_white.png","stimulus/no_go_white.png"]
+var strategy_stim = ["stimulus/right_arrow_black.png","stimulus/left_arrow_black.png","stimulus/no_go_black.png"]
 
 //Preload images
 jsPsych.pluginAPI.preloadImages(practice_images)
