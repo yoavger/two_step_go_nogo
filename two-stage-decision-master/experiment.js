@@ -135,11 +135,10 @@ var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
 		stimulus:
 		 "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-
+		 "<div class = centerbox><div class = fixation>+</div></div>"+
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
@@ -147,11 +146,10 @@ var get_fs_stim = function(images, colors) {
 	}, {
 		stimulus:
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[0] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[1] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
@@ -160,11 +158,10 @@ var get_fs_stim = function(images, colors) {
 	}, {
 		stimulus:
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[6] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[1] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[7] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>",
@@ -172,11 +169,10 @@ var get_fs_stim = function(images, colors) {
 	},{
 		stimulus:
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<div class = decision-left style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[6] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[2] +"'> </img></div>" +
-
 			"<div class = decision-right style='background:" + colors[0] + "; '>" +
 			"<img class = 'decision-stim' src= '" + images[7] + "'></img>" +
 			"<img class = 'strategy_stim' src= '" + strategy_stim[0] +"'> </img></div>",
@@ -194,18 +190,22 @@ Generate second stage stims. Takes in an array of images and colors (which chang
 var get_ss_stim = function(images, colors) {
 	var ss_stim_array = [
 		["<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[2] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[3] + "'></img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[3] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[2] + "'></img></div>"
 		],
 		["<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[4] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[5] + "'></img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[5] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[4] + "'></img></div>"
 		]
@@ -254,6 +254,7 @@ var get_first_selected = function() {
 		if ( sum == 2 || sum == 0 ){
 			if (stim_ids[0] == 1){
 			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 				"; '>" +
 				"<img class = 'decision-stim' src= '" + curr_images[0] + "'></div>" +
@@ -262,6 +263,7 @@ var get_first_selected = function() {
 				"<img class = 'decision-stim  *2fade' src= '" + curr_images[1] + "'></div>"
 			}else {
 				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = centerbox><div class = fixation>+</div></div>"+
 				"<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 					"; '>" +
 					"<img class = 'decision-stim' src= '" + curr_images[1] + "'></div>" +
@@ -272,6 +274,7 @@ var get_first_selected = function() {
 		}else {
 			if (stim_ids[0] == 1){
 				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = centerbox><div class = fixation>+</div></div>"+
 				"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 					"; '>" +
 					"<img class = 'decision-stim' src= '" + curr_images[6] + "'></div>" +
@@ -280,6 +283,7 @@ var get_first_selected = function() {
 					"<img class = 'decision-stim  *2fade' src= '" + curr_images[7] + "'></div>"
 			}else {
 				return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				"<div class = centerbox><div class = fixation>+</div></div>"+
 				"<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 					"; '>" +
 					"<img class = 'decision-stim' src= '" + curr_images[7] + "'></div>" +
@@ -294,6 +298,7 @@ var get_first_selected = function() {
 						first_selected = 0
 						var first_notselected = 1
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<div class = centerbox><div class = fixation>+</div></div>"+
 						"<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
@@ -304,6 +309,7 @@ var get_first_selected = function() {
 						first_selected = 1
 						var first_notselected = 0
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<div class = centerbox><div class = fixation>+</div></div>"+
 						 "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
@@ -314,6 +320,7 @@ var get_first_selected = function() {
 						first_selected = 1
 						var first_notselected = 0
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<div class = centerbox><div class = fixation>+</div></div>"+
 						 "<div class = 'selected " + stim_side[1] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[7] + "'></div>" +
@@ -324,6 +331,7 @@ var get_first_selected = function() {
 						first_selected = 0
 						var first_notselected = 1
 						return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<div class = centerbox><div class = fixation>+</div></div>"+
 						 "<div class = 'selected " + stim_side[0] + "' style='background:" + curr_colors[0] +
 							"; '>" +
 							"<img class = 'decision-stim' src= '" + curr_images[6] + "'></div>" +
@@ -395,10 +403,12 @@ var get_second_selected = function() {
 		})
 		if (choice == 0){
 		return "<img class = 'background_images' src= '" + background +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-sss_yes' src= '" + curr_images[second_selected] + "'></img></div>" +
 			"<img class = 'decision-right-sss_not' src= '" + curr_images[second_notselected] + "'></img></div>"
 		}else {
 			return "<img class = 'background_images' src= '" + background +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
 				"<img class = 'decision-left-sss_not' src= '" + curr_images[second_notselected] + "'></img></div>" +
 				"<img class = 'decision-right-sss_yes' src= '" + curr_images[second_selected] + "'></img></div>"
 		}
@@ -460,7 +470,8 @@ var get_feedback = function() {
 				bg_img = background_Image_stage_2_purpel
 		}
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
-						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>"
+						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>" +
+						"<div class = centerbox><div class = fixation>+</div></div>"
 
 		//return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
 
@@ -480,7 +491,9 @@ var get_feedback = function() {
 		}
 
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
-						"<img  class = 'FB-stim' src ='" + fb_img + "'> </div>"
+						"<img  class = 'FB-stim' src ='" + fb_img + "'> </div>"+
+						"<div class = centerbox><div class = fixation>+</div></div>"
+
 		// return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
 		  //*S*"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
 			//*S* "<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
