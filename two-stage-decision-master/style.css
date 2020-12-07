@@ -39,7 +39,7 @@
 
 .decision-stim {
   display: block;
-  height: 20vw;
+  height: 18vw;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -47,8 +47,8 @@
 }
 
 .decision-left {
-	width: 18vw;
-	height: 18vw;
+	width: 25vw;
+	height: 25vw;
   position:absolute;
   top:45%;
   left:50%;
@@ -57,8 +57,8 @@
 }
 
 .decision-right {
-	width: 18vw;
-	height: 18vw;
+	width: 25vw;
+	height: 25vw;
   position:absolute;
   top:45%;
   left:50%;
@@ -99,8 +99,8 @@
 
 .background_images {
   display: block;
-  height: auto;
-  width:auto;
+  height: 50vw;
+  width: 60vw;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -132,68 +132,132 @@
     display: block;
     height: 30vw;
   	position:absolute;
-  	top:50%;
-  	left:50%;
+  	top:46%;
+  	left:51%;
   	transform: translate(-50%,-50%);
 }
 
 
 .decision-left-ss {
-  height: 16vw;
+  height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-115%,-5%);
+  transform: translate(-125%,-5%);
 }
 /* -80 bigger means go right*/
 
 .decision-right-ss {
-	height: 16vw;
+	height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(15%,-5%);
+  transform: translate(25%,-5%);
 }
 /* -10 smaller means go left*/
 
 .decision-left-sss_not {
-  height: 16vw;
+  height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-115%,-5%);
+  transform: translate(-125%,-5%);
 }
 
 .decision-left-sss_yes {
-  height: 16vw;
+  height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(-115%,-5%);
+  transform: translate(-125%,-5%);
   border: 3px
   dashed #ffff66;
 }
 
 .decision-right-sss_not {
-  height: 16vw;
+  height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(15%,-5%);
+  transform: translate(25%,-5%);
 }
 
 .decision-right-sss_yes {
-  height: 16vw;
+  height: 18vw;
   position:absolute;
-  top:35%;
+  top:40%;
   left:50%;
   margin-right:-50%;
-  transform: translate(15%,-5%);
+  transform: translate(25%,-5%);
   border: 3px
   dashed #ffff66;
+}
+
+
+.decision-left-fs {
+
+	height: 18vw;
+  position:absolute;
+  top:46%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-110%,-5%);
+}
+
+.decision-right-fs {
+
+	height: 18vw;
+  position:absolute;
+  top:46%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(10%,-5%);
+}
+
+
+.decision-left-fs-yes {
+
+	height: 18vw;
+  position:absolute;
+  top:46%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-110%,-5%);
+  border: 3px
+  dashed #ffff66;
+}
+
+.decision-right-fs-yes {
+	height: 18vw;
+  position:absolute;
+  top:46%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(10%,-5%);
+  border: 3px
+  dashed #ffff66;
+}
+
+
+.strategy_stim_left {
+  display: block;
+  height: 10vw;
+	position:absolute;
+	top:30%;
+	left:50%;
+	transform: translate(-195%,-5%);
+}
+
+.strategy_stim_right {
+  display: block;
+  height: 10vw;
+	position:absolute;
+	top:30%;
+	left:50%;
+	transform: translate(100%,-5%);
 }
