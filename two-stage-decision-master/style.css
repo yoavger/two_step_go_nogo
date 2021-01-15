@@ -12,7 +12,7 @@
 /*	-webkit-animation: movetop 1s forwards; */
 /*	animation: movetop 1s forwards; */
 	border: 3px
-  dashed #ffff66;
+  dashed #0000ff;
 /*  dashed #000000;*/
 }
 
@@ -175,7 +175,7 @@
   margin-right:-50%;
   transform: translate(-125%,-5%);
   border: 3px
-  dashed #ffff66;
+  dashed #0000ff;
 }
 
 .decision-right-sss_not {
@@ -195,7 +195,7 @@
   margin-right:-50%;
   transform: translate(25%,-5%);
   border: 3px
-  dashed #ffff66;
+  dashed #0000ff;
 }
 
 
@@ -229,7 +229,7 @@
   margin-right:-50%;
   transform: translate(-110%,-5%);
   border: 3px
-  dashed #ffff66;
+  dashed #0000ff;
 }
 
 .decision-right-fs-yes {
@@ -240,7 +240,7 @@
   margin-right:-50%;
   transform: translate(10%,-5%);
   border: 3px
-  dashed #ffff66;
+  dashed #0000ff;
 }
 
 
