@@ -236,22 +236,22 @@ Generate second stage stims. Takes in an array of images and colors (which chang
 /* yoav : 4 possible second stage choices*/
 var get_ss_stim = function(images, colors) {
 	var ss_stim_array = [
-		["<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
+		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[2] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[3] + "'></img></div>",
 
-			"<img class = 'background_images' src= '" + background_Image_stage_2_green +"'> </img></div>"+
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[3] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[2] + "'></img></div>"
 		],
-		["<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
+		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[4] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[5] + "'></img></div>",
 
-			"<img class = 'background_images' src= '" + background_Image_stage_2_purpel +"'> </img></div>"+
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
 			"<img class = 'decision-left-ss' src= '" + images[5] + "'></img></div>" +
 			"<img class = 'decision-right-ss' src= '" + images[4] + "'></img></div>"
@@ -518,9 +518,9 @@ var get_second_selected = function() {
 	// console.log("stim_ids- "+ stim_ids);
 	console.log("choice "  + choice )
 	if (stim_ids[0] == 2 || stim_ids[0] == 3 ){
-		var background = background_Image_stage_2_green
+		var background = background_Image_stage_1
 	}else {
-		var background = background_Image_stage_2_purpel
+		var background = background_Image_stage_1
 	}
 	if (choice != -1) {
 		second_selected = stim_ids[choice]
@@ -591,10 +591,10 @@ var get_feedback = function() {
 		total_score += 1
 		if (stim_ids[0] == 2 || stim_ids[0] == 3){
 				fb_img = terminal_state_img[0]
-				bg_img = background_Image_stage_2_green
+				bg_img = background_Image_stage_1
 		}else{
 				fb_img = terminal_state_img[2]
-				bg_img = background_Image_stage_2_purpel
+				bg_img = background_Image_stage_1
 		}
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
 						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>" +
@@ -611,10 +611,10 @@ var get_feedback = function() {
 		// console.log("0")
 		if (stim_ids[0] == 2 ||stim_ids[0] == 3){
 			 	fb_img = terminal_state_img[1]
-				bg_img = background_Image_stage_2_green
+				bg_img = background_Image_stage_1
 		}else{
 				fb_img = terminal_state_img[3]
-				bg_img = background_Image_stage_2_purpel
+				bg_img = background_Image_stage_1
 		}
 
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
@@ -985,9 +985,9 @@ var practice_images =
 		]
 
 	//*S* set background Image
-var background_Image_stage_1 = "img_s_y/background_1.png"
-var background_Image_stage_2_green = "img_s_y/green_background.png"
-var background_Image_stage_2_purpel = "img_s_y/purple_background.png"
+var background_Image_stage_1 = "stim/background_1.png"
+//var background_Image_stage_2_green = "img_s_y/green_background.png"
+//var background_Image_stage_2_purpel = "img_s_y/purple_background.png"
 
 var terminal_state_img = ["img_s_y/green_pearl.png",
 											"img_s_y/green_no_pearl.png",
@@ -1001,8 +1001,8 @@ var strategy_stim = ["stimulus/right_arrow_black.png","stimulus/left_arrow_black
 jsPsych.pluginAPI.preloadImages(practice_images)
 jsPsych.pluginAPI.preloadImages(test_images)
 jsPsych.pluginAPI.preloadImages(background_Image_stage_1)
-jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
-jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
+//jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
+//jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
 jsPsych.pluginAPI.preloadImages(terminal_state_img)
 jsPsych.pluginAPI.preloadImages(glow_images)
 
