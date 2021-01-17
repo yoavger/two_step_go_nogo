@@ -589,6 +589,7 @@ var get_feedback = function() {
 		FB = 1
 		// console.log("1")
 		total_score += 1
+		 console.log("total_score= " + total_score)
 		if (stim_ids[0] == 2 || stim_ids[0] == 3){
 				fb_img = terminal_state_img[0]
 				bg_img = background_Image_stage_1
@@ -597,8 +598,7 @@ var get_feedback = function() {
 				bg_img = background_Image_stage_1
 		}
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
-						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>" +
-						"<div class = centerbox><div class = fixation>+</div></div>"
+						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>"
 
 		//return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
 
@@ -608,7 +608,8 @@ var get_feedback = function() {
 	} else {
 	//	update_FB();
 		FB = 0
-		// console.log("0")
+		total_score -= 1
+		console.log("total_score= " + total_score)
 		if (stim_ids[0] == 2 ||stim_ids[0] == 3){
 			 	fb_img = terminal_state_img[1]
 				bg_img = background_Image_stage_1
@@ -618,8 +619,7 @@ var get_feedback = function() {
 		}
 
 		return 	"<img class = 'background_images' src= '" + bg_img + "'> </img></div>" +
-						"<img  class = 'FB-stim' src ='" + fb_img + "'> </div>"+
-						"<div class = centerbox><div class = fixation>+</div></div>"
+						"<img  class = 'FB-stim' src ='" + fb_img + "'> </div>"
 
 		// return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
 		  //*S*"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
