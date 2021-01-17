@@ -1011,7 +1011,7 @@ jsPsych.pluginAPI.preloadImages(test_images)
 jsPsych.pluginAPI.preloadImages(background_Image_stage_1)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
-jsPsych.pluginAPI.preloadImages(terminal_state_img_test)
+jsPsych.pluginAPI.preloadImages(terminal_state_img)
 jsPsych.pluginAPI.preloadImages(terminal_state_img_practice)
 
 jsPsych.pluginAPI.preloadImages(glow_images)
