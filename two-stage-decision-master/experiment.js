@@ -491,11 +491,11 @@ var choose_second_stage = function() {
 	} else {
 		FB_on = 1;
 		stage = first_selected
-		transition = 'frequent'
-		if (Math.random() < 0.3) {
+	/*	transition = 'frequent'
+		if (Math.random() < 0) {
 			stage = 1 - stage
 			transition = 'infrequent'
-		}
+		}*/
 
 		var stage_index = stage * 2
 		var stim_index = stage_index + Math.round(Math.random())
@@ -1060,8 +1060,11 @@ var post_task_block = {
    data: {
        trial_id: "post task questions"
    },
-   questions: ['<p class = center-block-text style = "font-size: 20px">Please summarize what you were asked to do in this task.</p>',
-              '<p class = center-block-text style = "font-size: 20px">Do you have any comments about this task?</p>'],
+   questions: ['<p class = center-block-text style = "font-size: 20px">How was the difficulty level of the game?</p>',
+	 						'<p class = center-block-text style = "font-size: 20px">What made it difficult for you?</p>',
+	 						'<p class = center-block-text style = "font-size: 20px">How well do you feel you understood the rules of the game?</p>',
+	 						'<p class = center-block-text style = "font-size: 20px">Was there anything you didn’t understand? or something specific that was confusing?</p>',
+              '<p class = center-block-text style = "font-size: 20px">What strategy did you use in your selections? </p>'],
    rows: [15, 15],
    columns: [60,60]
 };
