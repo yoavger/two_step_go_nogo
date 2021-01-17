@@ -997,6 +997,12 @@ var terminal_state_img = ["stim/o_pur1_r.png",
 											"stim/o_o2_p.png"
 											]
 
+var terminal_state_img_practice = ["stim/o_y1_r.png",
+															"stim/o_y1_p.png",
+															"stim/o_b1_r.png",
+															"stim/o_b1_p.png"
+											]
+
 var strategy_stim = ["symbol/right_arrow_black.png","symbol/left_arrow_black.png","symbol/no_go_black.png"]
 
 //Preload images
@@ -1005,7 +1011,9 @@ jsPsych.pluginAPI.preloadImages(test_images)
 jsPsych.pluginAPI.preloadImages(background_Image_stage_1)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
-jsPsych.pluginAPI.preloadImages(terminal_state_img)
+jsPsych.pluginAPI.preloadImages(terminal_state_img_test)
+jsPsych.pluginAPI.preloadImages(terminal_state_img_practice)
+
 jsPsych.pluginAPI.preloadImages(glow_images)
 
 
