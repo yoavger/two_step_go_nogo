@@ -1065,8 +1065,8 @@ var post_task_block = {
 	 						'<p class = center-block-text style = "font-size: 20px">How well do you feel you understood the rules of the game?</p>',
 	 						'<p class = center-block-text style = "font-size: 20px">Was there anything you didn’t understand? or something specific that was confusing?</p>',
               '<p class = center-block-text style = "font-size: 20px">What strategy did you use in your selections? </p>'],
-   rows: [15, 15,15, 15,15],
-   columns: [30,30,30,30,30]
+   rows: [40,40,40,40,40],
+   columns: [15, 15,15, 15,15]
 };
 
 /* define static blocks */
