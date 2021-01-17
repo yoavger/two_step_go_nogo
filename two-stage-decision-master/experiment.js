@@ -949,53 +949,55 @@ var curr_colors = practice_colors
 var test_images =
 
 		[
-			"img_s_y/blue_boat_left.png",
-			"img_s_y/orange_boat_right.png",
-			"img_s_y/green_shell_1.png",
-			"img_s_y/green_shell_2.png",
-			"img_s_y/purpel_shell_1.png",
-			"img_s_y/purpel_shell_2.png",
-			"img_s_y/orange_boat_left.png",
-			"img_s_y/blue_boat_right.png"
+			"stim/f_p_l.png",
+			"stim/f_o_r.png",
+			"stim/o_pur1.png",
+			"stim/o_pur2.png",
+			"stim/o_o1.png",
+			"stim/o_o2.png",
+			"stim/f_o_l.png",
+			"stim/f_p_r.png"
 
 		]
 
+
+
 var practice_images =
 	[
-		"img_s_y/blue_boat_left.png",
-		"img_s_y/orange_boat_right.png",
-		"img_s_y/green_shell_1.png",
-		"img_s_y/green_shell_2.png",
-		"img_s_y/purpel_shell_1.png",
-		"img_s_y/purpel_shell_2.png",
-		"img_s_y/orange_boat_left.png",
-		"img_s_y/blue_boat_right.png"
+		"stim/f_y_l.png",
+		"stim/f_b_r.png",
+		"stim/o_y1.png",
+		"stim/o_y2.png",
+		"stim/o_b1.png",
+		"stim/o_b2.png",
+		"stim/f_b_l.png",
+		"stim/f_y_r.png"
 	]
 
 	var glow_images =
 		[
-			"img_s_y/blue_boat_left_glow.png",
-			"img_s_y/orange_boat_right_glow.png",
-			"img_s_y/green_shell_1_glow.png",
-			"img_s_y/green_shell_2_glow.png",
-			"img_s_y/purpel_shell_1_glow.png",
-			"img_s_y/purpel_shell_2_glow.png",
-			"img_s_y/orange_boat_left_glow.png",
-			"img_s_y/blue_boat_right_glow.png"
+			"stim/blue_boat_left_glow.png",
+			"stim/orange_boat_right_glow.png",
+			"stim/green_shell_1_glow.png",
+			"stim/green_shell_2_glow.png",
+			"stim/purpel_shell_1_glow.png",
+			"stim/purpel_shell_2_glow.png",
+			"stim/orange_boat_left_glow.png",
+			"stim/blue_boat_right_glow.png"
 		]
 
 	//*S* set background Image
 var background_Image_stage_1 = "stim/background_1.png"
-//var background_Image_stage_2_green = "img_s_y/green_background.png"
-//var background_Image_stage_2_purpel = "img_s_y/purple_background.png"
+//var background_Image_stage_2_green = "stim/green_background.png"
+//var background_Image_stage_2_purpel = "stim/purple_background.png"
 
-var terminal_state_img = ["img_s_y/green_pearl.png",
-											"img_s_y/green_no_pearl.png",
-											"img_s_y/purpel_pearl.png",
-											"img_s_y/purple_no_pearl.png"
+var terminal_state_img = ["stim/o_pur1_r.png",
+											"stim/o_pur1_p.png",
+											"stim/o_o1_r.png",
+											"stim/o_o2_p.png"
 											]
 
-var strategy_stim = ["stimulus/right_arrow_black.png","stimulus/left_arrow_black.png","stimulus/no_go_black.png"]
+var strategy_stim = ["symbol/right_arrow_black.png","symbol/left_arrow_black.png","symbol/no_go_black.png"]
 
 //Preload images
 jsPsych.pluginAPI.preloadImages(practice_images)
