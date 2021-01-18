@@ -113,12 +113,14 @@ var change_phase = function() {
 		curr_colors = test_colors
 		curr_fs_stims = test_fs_stims
 		curr_ss_stims = test_ss_stim
+		terminal_state_img =  terminal_state_img_test
 		exp_stage = 'test'
 	} else {
 		curr_images = practice_images
 		curr_colors = practice_colors
 		curr_fs_stims = practice_fs_stims
 		curr_ss_stim = practice_ss_stim
+		terminal_state_img =  terminal_state_img_practice
 		exp_stage = 'practice'
 	}
 	total_score = 0
@@ -609,7 +611,7 @@ var get_feedback = function() {
 	//	update_FB();
 		FB = 0
 		total_score -= 1
-		console.log("total_score= " + total_score)
+		//console.log("total_score= " + total_score)
 		if (stim_ids[0] == 2 ||stim_ids[0] == 3){
 			 	fb_img = terminal_state_img[1]
 				bg_img = background_Image_stage_1
@@ -1563,16 +1565,24 @@ var background_Image_stage_1 = "stim/background_1.png"
 //var background_Image_stage_2_green = "stim/green_background.png"
 //var background_Image_stage_2_purpel = "stim/purple_background.png"
 
-var terminal_state_img = ["stim/o_pur1_r.png",
+var terminal_state_img_test = ["stim/o_pur1_r.png",
 											"stim/o_pur1_p.png",
+											"stim/o_pur2_r.png",
+											"stim/o_pur2_p.png",
 											"stim/o_o1_r.png",
+											"stim/o_o1_p.png",
+											"stim/o_o2_r.png",
 											"stim/o_o2_p.png"
 											]
 
 var terminal_state_img_practice = ["stim/o_y1_r.png",
 															"stim/o_y1_p.png",
+															"stim/o_y2_r.png",
+															"stim/o_y2_p.png",
 															"stim/o_b1_r.png",
-															"stim/o_b1_p.png"
+															"stim/o_b1_p.png",
+															"stim/o_b2_r.png",
+															"stim/o_b2_p.png"
 											]
 
 var strategy_stim = ["symbol/right_arrow_black.png","symbol/left_arrow_black.png","symbol/no_go_black.png"]
@@ -1583,13 +1593,15 @@ jsPsych.pluginAPI.preloadImages(test_images)
 jsPsych.pluginAPI.preloadImages(background_Image_stage_1)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_green)
 //jsPsych.pluginAPI.preloadImages(background_Image_stage_2_purpel)
-jsPsych.pluginAPI.preloadImages(terminal_state_img)
+jsPsych.pluginAPI.preloadImages(terminal_state_img_test)
 jsPsych.pluginAPI.preloadImages(terminal_state_img_practice)
 
 jsPsych.pluginAPI.preloadImages(glow_images)
 
 
 var curr_images =  practice_images
+var terminal_state_img =  terminal_state_img_practice
+
 
 var test_fs_stim = get_fs_stim_new(test_images, test_colors)
 var practice_fs_stim = get_fs_stim_new(practice_images, practice_colors)
