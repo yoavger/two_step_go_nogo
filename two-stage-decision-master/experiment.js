@@ -658,7 +658,7 @@ if (j == 39 ){
 
 }
 
-var get_second_selected = function() {
+/*var get_second_selected = function() {
 	var second_stage_trial = jsPsych.data.getLastTrialData()
 	var choice = choices.indexOf(second_stage_trial.key_press)
 	 console.log("second selected");
@@ -693,6 +693,7 @@ var get_second_selected = function() {
 	}
 
 }
+*/
 
 /*
 After each trial the FB_matrix is updated such that each of the 4 reward probabilities changes by a random amount
@@ -716,6 +717,69 @@ Otherwise, check the FB_matrix which determines the reward probabilities for eac
 2 for each of the 2 second stages). Flip a coin using the relevant probability and give FB.
 After FB, the FB_atrix is updated.
 */
+
+var get_feedback_new = function() {
+	 console.log("second_selected = " + second_selected)
+	  /*console.log("second_selected = " + (second_selected-2))
+	 console.log("current_trial = " + current_trial)
+ try {	 console.log("prob = " + FB_matrix[second_selected - 2][current_trial])
+  }catch{}
+	  console.log(FB_matrix[second_selected - 2])
+	  console.log(FB_matrix)*/
+
+	if (second_selected == -1) {
+		return "<div class = centerbox><div class = center-text>" +
+		"Wrong key</div></div>"
+	} else if (Math.random() < FB_matrix[second_selected - 2][current_trial]) {
+		var fb_img = 0
+	//	var bg_img = background_Image_stage_1
+		// update_FB();
+		FB = 1
+		// console.log("1")
+		total_score += 1
+		 console.log("total_score= " + total_score)
+		if (second_selected == 2){
+				fb_img = terminal_state_img[2]
+		}else if (second_selected == 3){
+				fb_img = terminal_state_img[3]
+		}else if (second_selected == 4){
+				fb_img = terminal_state_img[0]
+		}else if (second_selected == 5){
+				fb_img = terminal_state_img[1]
+		}
+		return 	"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>"
+
+		//return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
+
+	   //*S*	"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+		//*S*	"<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+
+	} else {
+	//	update_FB();
+		FB = 0
+		total_score -= 1
+		//console.log("total_score= " + total_score)
+		if (second_selected == 2){
+				fb_img = terminal_state_img[6]
+		}else if (second_selected == 3){
+				fb_img = terminal_state_img[7]
+		}else if (second_selected == 4){
+				fb_img = terminal_state_img[4]
+		}else if (second_selected == 5){
+				fb_img = terminal_state_img[5]
+		}
+		return 	"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>"
+
+		// return "<div style = text-align:center><p class = decision-fb style = 'color:red;font-size:120px'>0!</p></div>"
+		  //*S*"<div class = 'decision-top faded' style='background:" + curr_colors[stage + 1] + "; '>" +
+			//*S* "<img class = 'decision-stim' src= '" + curr_images[second_selected] + "'></div>" +
+	}
+}
+
+
+
 var get_feedback = function() {
 	/* console.log("second_selected = " + second_selected)
 	  console.log("second_selected = " + (second_selected-2))
@@ -1709,24 +1773,25 @@ var background_Image_stage_1 = "stim/background_1.png"
 //var background_Image_stage_2_purpel = "stim/purple_background.png"
 
 var terminal_state_img_test = ["stim/o_pur1_r.png",
-											"stim/o_pur1_p.png",
-											"stim/o_pur2_r.png",
-											"stim/o_pur2_p.png",
-											"stim/o_o1_r.png",
-											"stim/o_o1_p.png",
-											"stim/o_o2_r.png",
-											"stim/o_o2_p.png"
+															"stim/o_pur2_r.png",
+															"stim/o_o1_r.png",
+															"stim/o_o2_r.png",
+															"stim/o_pur1_p.png",
+															"stim/o_pur2_p.png",
+															"stim/o_o1_p.png",
+															"stim/o_o2_p.png"
 											]
 
 var terminal_state_img_practice = ["stim/o_y1_r.png",
-															"stim/o_y1_p.png",
-															"stim/o_y2_r.png",
-															"stim/o_y2_p.png",
-															"stim/o_b1_r.png",
-															"stim/o_b1_p.png",
-															"stim/o_b2_r.png",
-															"stim/o_b2_p.png"
+																	"stim/o_y2_r.png",
+																	"stim/o_b1_r.png",
+																	"stim/o_b2_r.png",
+																	"stim/o_y1_p.png",
+																	"stim/o_y2_p.png",
+																	"stim/o_b1_p.png",
+																	"stim/o_b2_p.png"
 											]
+
 
 var strategy_stim = ["symbol/right_arrow_black.png","symbol/left_arrow_black.png","symbol/no_go_black.png"]
 
@@ -2057,7 +2122,7 @@ var FB_stage = {
 	data: {
 		trial_id: 'feedback_stage'
 	},
-	stimulus: get_feedback,
+	stimulus: get_feedback_new,
 	is_html: true,
 	choices: 'none',
 	timing_response: 500,
