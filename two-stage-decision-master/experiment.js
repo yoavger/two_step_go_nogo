@@ -2124,13 +2124,15 @@ var post_task_block = {
    data: {
        trial_id: "post task questions"
    },
-   questions: ['<p class = center-block-text style = "font-size: 20px">How was the difficulty level of the game?</p>',
+   questions: ['<p class = center-block-text style = "font-size: 20px">What is your age?</p>',
+	 						'<p class = center-block-text style = "font-size: 20px">What is your gender? (female/ male/ other)</p>',
+		 					'<p class = center-block-text style = "font-size: 20px">How was the difficulty level of the game?</p>',
 	 						'<p class = center-block-text style = "font-size: 20px">What made it difficult for you?</p>',
 	 						'<p class = center-block-text style = "font-size: 20px">How well do you feel you understood the rules of the game?</p>',
 	 						'<p class = center-block-text style = "font-size: 20px">Was there anything you didn’t understand? or something specific that was confusing?</p>',
               '<p class = center-block-text style = "font-size: 20px">What strategy did you use in your selections? </p>'],
-   rows: [15, 15,15, 15,15],
-   columns:  [40,40,40,40,40]
+   rows: [2,2,5, 5,5, 5,5],
+   columns:  [10,10,60,60,60, 60,60]
 };
 
 /* define static blocks */
@@ -2255,7 +2257,7 @@ var start_practice_block = {
 	data: {
 		trial_id: 'practice_intro'
 	},
-	text: '<div class = centerbox><p class = center-block-text>Starting practice. Press <strong>enter</strong> to begin.</p></div>',
+	text: '<div class = centerbox><p class = center-block-text>You will now practice for a few trials that will simulate the game to follow.</p><p class = center-block-text> Note that the colors of the fishermen and oysters differ between the practice trials and the game but the rules remain the same. </p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
 	cont_key: [13],
 	timing_response: 180000,
 	timing_post_trial: 1000
@@ -2266,7 +2268,7 @@ var start_test_block = {
 	data: {
 		trial_id: 'test_intro'
 	},
-	text: "<div class = centerbox><p class = block-text>Finished with practice. We will now start the test with new shapes and stages.</p><p class = block-text>Just like in the practice, each first-stage choice is primarily associated with one second-stage and each second-stage shape has a different chance of earning a point. Each second-stage shape's chance of earning a gold coin changes over the expeirment, so the best shape early on may not be the best shape later. In contrast, once you learn which stage a first-stage choice brings you to most of the time, it will stay the same for the whole experiment.</p><p class = block-text>Your task is to earn as many gold coins as possible. Press <strong>enter</strong> to begin.</p></div>",
+	text: "<div class = centerbox><p class =center-block-text>You have finished the practice.</p><p class =center-block-text> We will now start the game.</p><p class =center-block-text> We remind you that each oysters' chance of producing a pearl changes during the course of the game, so the best one early on may not be the best one later.</p><p class = center-block-text> Press <strong>enter</strong> to begin.</p></div>",
 	cont_key: [13],
 	timing_response: 180000,
 	timing_post_trial: 1000
@@ -2441,6 +2443,20 @@ var fixation = {
 	}
 }
 
+var almost_end_block = {
+	type: 'poldrack-text',
+	data: {
+		trial_id: 'end',
+    	exp_id: 'two_stage_decision'
+	},
+	text: '<div class = centerbox><p class = center-block-text>You have finished the game!</p><p class = center-block-text> Please answer the following questions and elaborate as much as possible.</p><p class =center-block-text> We remind you that all data is collected anonymously</p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
+	cont_key: [13],
+	timing_response: 180000,
+	timing_post_trial: 0,
+	on_finish: assessPerformance
+};
+
+
 var two_stage_decision_experiment = []
 //two_stage_decision_experiment.push(instruction_node);
 //example trial
@@ -2451,7 +2467,7 @@ var two_stage_decision_experiment = []
 //two_stage_decision_experiment.push(noFB_node)
 //continue instructions
 //two_stage_decision_experiment.push(second_instructions_block);
-//two_stage_decision_experiment.push(start_practice_block);
+two_stage_decision_experiment.push(start_practice_block);
 //two_stage_decision_experiment.push(attention_node)
 for (var i = 0; i < practice_trials_num; i++) {
 	two_stage_decision_experiment.push(fixation)
@@ -2484,5 +2500,6 @@ for (var i = 0; i < test_trials_num / 2; i++) {
 	two_stage_decision_experiment.push(noFB_node)
 }
 two_stage_decision_experiment.push(attention_node)
+two_stage_decision_experiment.push(almost_end_block)
 two_stage_decision_experiment.push(post_task_block)
-two_stage_decision_experiment.push(end_block)
+//two_stage_decision_experiment.push(end_block)
