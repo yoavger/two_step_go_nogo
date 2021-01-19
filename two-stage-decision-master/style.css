@@ -100,7 +100,7 @@
 .background_images {
   display: block;
   height: 50vw;
-  width: 60vw;
+  width: 78vw;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -201,20 +201,20 @@
 
 .decision-left-fs {
 
-	height: 18vw;
+	height: 25vw;
   position:absolute;
   top:46%;
-  left:50%;
+  left:52%;
   margin-right:-50%;
   transform: translate(-110%,-5%);
 }
 
 .decision-right-fs {
 
-	height: 18vw;
+	height: 25vw;
   position:absolute;
   top:46%;
-  left:50%;
+  left:48%;
   margin-right:-50%;
   transform: translate(10%,-5%);
 }
@@ -222,24 +222,24 @@
 
 .decision-left-fs-yes {
 
-	height: 18vw;
+	height: 25vw;
   position:absolute;
   top:46%;
-  left:50%;
+  left:52%;
   margin-right:-50%;
   transform: translate(-110%,-5%);
-  border: 3px
+  border: 8px
   dashed #0000ff;
 }
 
 .decision-right-fs-yes {
-	height: 18vw;
+	height: 25vw;
   position:absolute;
   top:46%;
-  left:50%;
+  left:48%;
   margin-right:-50%;
   transform: translate(10%,-5%);
-  border: 3px
+  border: 4px
   dashed #0000ff;
 }
 
@@ -248,7 +248,7 @@
   display: block;
   height: 10vw;
 	position:absolute;
-	top:30%;
+	top:23%;
 	left:50%;
 	transform: translate(-195%,-5%);
 }
@@ -257,7 +257,7 @@
   display: block;
   height: 10vw;
 	position:absolute;
-	top:30%;
+	top:23%;
 	left:50%;
 	transform: translate(100%,-5%);
 }

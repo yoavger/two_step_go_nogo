@@ -180,7 +180,7 @@ var get_fs_stim_new = function(images, colors) {
 }
 
 /* yoav : added 4 stimulus to cover all vartion of first stage */
-var get_fs_stim = function(images, colors) {
+/*var get_fs_stim = function(images, colors) {
 	var fs_stim = [{
 		stimulus:
 		 "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
@@ -231,7 +231,7 @@ var get_fs_stim = function(images, colors) {
 ]
 	return fs_stim
 }
-
+*/
 /*
 Generate second stage stims. Takes in an array of images and colors (which change between practice and test)
 */
@@ -1857,7 +1857,7 @@ var post_task_block = {
 	 						'<p class = center-block-text style = "font-size: 20px">How well do you feel you understood the rules of the game?</p>',
 	 						'<p class = center-block-text style = "font-size: 20px">Was there anything you didn’t understand? or something specific that was confusing?</p>',
               '<p class = center-block-text style = "font-size: 20px">What strategy did you use in your selections? </p>'],
-   rows: [8,8,8,8,8],
+   rows: [15, 15,15, 15,15],
    columns:  [40,40,40,40,40]
 };
 
