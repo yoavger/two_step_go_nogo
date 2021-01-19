@@ -2,6 +2,10 @@
 /* Define helper functions */
 /* ************************************ */
 
+const id = localStorage.getItem('prolific');
+const lastChar = id[id.length - 1];
+const isLeftGroup = lastChar >= 0 && lastChar <= 7;
+
 var getInstructFeedback = function() {
 	return '<div class = centerbox><p class = center-block-text>' + feedback_instruct_text +
 		'</p></div>'
@@ -134,7 +138,7 @@ Generate first stage stims. Takes in an array of images and colors (which change
 
 
 /* yoav : added 4 stimulus to cover all vartion of first stage */
-var get_fs_stim_new = function(images, colors) {
+var get_fs_stim_right = function(images, colors) {
 	var fs_stim = [{
 		stimulus:
 		 "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
@@ -178,6 +182,54 @@ var get_fs_stim_new = function(images, colors) {
 ]
 	return fs_stim
 }
+
+var get_fs_stim_left = function(images, colors) {
+	var fs_stim = [{
+		stimulus:
+		 "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		 "<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[0] + "'></img></div>"+
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+				"<img class = 'decision-right-fs' src= '" + images[1] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+		stim_order: [0, 0]
+	/*}, {
+		stimulus:
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[0] + "'></img>"+
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[1] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+		stim_order: [1, 1]
+
+
+	}, {
+		stimulus:
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+		  "<img class = 'decision-left-fs' src= '" + images[2] + "'></img></div>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[3] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+		stim_order: [1, 0]*/
+	},{
+		stimulus:
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+      "<img class = 'decision-left-fs' src= '" + images[2] + "'></img>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+		"<img class = 'decision-right-fs' src= '" + images[3] + "'></img>" +
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+		stim_order: [0, 1]
+	}
+
+]
+	return fs_stim
+}
+
+
+var get_fs_stim_new = isLeftGroup ? get_fs_stim_left : get_fs_stim_right;
 
 /* yoav : added 4 stimulus to cover all vartion of first stage */
 /*var get_fs_stim = function(images, colors) {
@@ -236,7 +288,7 @@ var get_fs_stim_new = function(images, colors) {
 Generate second stage stims. Takes in an array of images and colors (which change between practice and test)
 */
 
-var get_ss_stim_new = function(images, colors) {
+var get_ss_stim_right = function(images, colors) {
 	var ss_stim_array = [
 		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
@@ -274,6 +326,48 @@ var get_ss_stim_new = function(images, colors) {
 	}
 	return ss_stim
 }
+
+var get_ss_stim_left = function(images, colors) {
+	var ss_stim_array = [
+		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[6] + "'></img></div>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[7] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[7] + "'></img></div>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[6] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>"
+		],
+		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[4] + "'></img></div>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[5] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
+
+			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+			"<img class = 'decision-left-fs' src= '" + images[5] + "'></img></div>" +
+			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
+			"<img class = 'decision-right-fs' src= '" + images[4] + "'></img></div>"+
+			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>"
+		]
+	]
+
+	var ss_stim = {
+		stimulus: [ss_stim_array[0][0], ss_stim_array[0][1], ss_stim_array[1][0], ss_stim_array[1][1]],
+		stim_order: [[2, 3], [3, 2], [4, 5], [5, 4]]
+	}
+	return ss_stim
+}
+
+
+var get_ss_stim_new = isLeftGroup ? get_ss_stim_left : get_ss_stim_right;
 
 
 /* yoav : 4 possible second stage choices*/
@@ -329,15 +423,15 @@ Also updates the global variables choice, first_selected and first_notselected, 
 */
 
 
- var get_first_selected_new = function() {
+ var get_first_selected_right = function() {
  	var first_stage_trial = jsPsych.data.getLastTrialData()
  	var i = first_stage_trial.key_press;
  	var choice = choices.indexOf(first_stage_trial.key_press)
- 	console.log("stim_ids1 = " + stim_ids)
-	console.log("choice1 = " + choice)
+ 	console.log("stim_ids_fs = " + stim_ids)
+	//console.log("choice1 = " + choice)
 	console.log("i = " + i)
- 	if (i == 39 ){
-		console.log("choice1 = " + choice)
+ 	if (i == 75 ){
+		//console.log("choice1 = " + choice)
  		if (stim_ids[1] == 0 ){
 			first_selected = 1
 			console.log("first_selected = " + first_selected)
@@ -387,21 +481,86 @@ Also updates the global variables choice, first_selected and first_notselected, 
 				 }
  		}else{
  		first_selected = -1
-		console.log("first_selected = " + first_selected)
+		//console.log("first_selected = " + first_selected)
  		jsPsych.data.addDataToLastTrial({
  			stim_selected: first_selected
  		})
  	}
  }
 
+ var get_first_selected_left = function() {
+  var first_stage_trial = jsPsych.data.getLastTrialData()
+  var i = first_stage_trial.key_press;
+  var choice = choices.indexOf(first_stage_trial.key_press)
+  console.log("stim_ids1 = " + stim_ids)
+  console.log("choice1 = " + choice)
+  console.log("i = " + i)
+  if (i == 83 ){
+ 	 console.log("choice1 = " + choice)
+ 	 if (stim_ids[1] == 0 ){
+ 		 first_selected = 0
+ 		 console.log("first_selected = " + first_selected)
+ 			 var first_notselected = first_selected+1
+ 			 jsPsych.data.addDataToLastTrial({
+ 				 stim_selected: first_selected
+ 			 })
+ 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+ 		 "<div class = centerbox><div class = fixation>+</div></div>"+
+ 			"<img class = 'decision-left-fs-yes' src= '" + curr_images[0] + "'></img></div>" +
+ 			"<img class = 'decision-right-fs' src= '" + curr_images[1] + "'></img></div>"
+ 		 }else {
+ 			 first_selected = 2
+ 			 console.log("first_selected = " + first_selected)
+ 				 var first_notselected = first_selected+1
+ 				 jsPsych.data.addDataToLastTrial({
+ 					 stim_selected: first_selected
+ 				 })
+ 			 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+ 			 "<div class = centerbox><div class = fixation>+</div></div>"+
+ 				"<img class = 'decision-right-fs' src= '" + curr_images[3] + "'></img></div>" +
+ 				"<img class = 'decision-left-fs-yes' src= '" + curr_images[2] + "'></img></div>"
+ 				}
+  }else if(i == -1){
+ 	 if (stim_ids[1] == 0 ){
+ 		 first_selected = 1
+ 		 console.log("first_selected = " + first_selected)
+ 			 var first_notselected = first_selected-1
+ 			 jsPsych.data.addDataToLastTrial({
+ 				 stim_selected: first_selected
+ 			 })
+ 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+ 		 "<div class = centerbox><div class = fixation>+</div></div>"+
+ 			"<img class = 'decision-right-fs-yes' src= '" + curr_images[1] + "'></img></div>" +
+ 			"<img class = 'decision-left-fs' src= '" + curr_images[0] + "'></img></div>"
+ 		 }else {
+ 			 first_selected = 3
+ 			 console.log("first_selected = " + first_selected)
+ 				 var first_notselected = first_selected-1
+ 				 jsPsych.data.addDataToLastTrial({
+ 					 stim_selected: first_selected
+ 				 })
+ 			 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+ 			 "<div class = centerbox><div class = fixation>+</div></div>"+
+ 				"<img class = 'decision-left-fs' src= '" + curr_images[2] + "'></img></div>" +
+ 				"<img class = 'decision-right-fs-yes' src= '" + curr_images[3] + "'></img></div>"
+ 				}
+ 	 }else{
+ 	 first_selected = -1
+ 	 console.log("first_selected = " + first_selected)
+ 	 jsPsych.data.addDataToLastTrial({
+ 		 stim_selected: first_selected
+ 	 })
+  }
+ }
 
+ var get_first_selected_new = isLeftGroup ? get_first_selected_left : get_first_selected_right;
 
 
 /*var get_first_selected = function() {
 	var first_stage_trial = jsPsych.data.getLastTrialData()
 	var i = first_stage_trial.key_press;
 	var choice = choices.indexOf(first_stage_trial.key_press)
-	// console.log("choice first = " + stim_ids)
+	// //console.log("choice first = " + stim_ids)
 	if (i == 37 && stim_ids[0] == 1 || i == 39 && stim_ids[0] == 0){
 		var sum = stim_ids[0] + stim_ids[1]
 		first_selected = stim_ids[choice]
@@ -532,9 +691,9 @@ var choose_second_stage = function() {
 	var stage_index = stage * 2
 	var stim_index = stage_index + Math.round(Math.random())
 	stim_ids = curr_ss_stims.stim_order[stim_index]
-	console.log("stage = " + stage)
-	console.log("stim_index = " + stim_index)
-	console.log("stim_ids = " + stim_ids)
+	//console.log("stage = " + stage)
+	//console.log("stim_index = " + stim_index)
+	//console.log("stim_ids = " + stim_ids)
 
 	return "<div class = 'decision-top faded' style='background:" + curr_colors[0] + "; '>" +
 	//*S**Y*	"<img class = 'decision-stim' src= '" + curr_images[first_selected] + "'></div>" +
@@ -548,18 +707,19 @@ var choose_second_stage = function() {
 /*
 Animates second stage choice, similarly to get_first_selected
 */
-var get_second_selected_new = function() {
+var get_second_selected_right = function() {
 	var second_stage_trial = jsPsych.data.getLastTrialData()
 	var j = second_stage_trial.key_press;
 	var choice = choices.indexOf(second_stage_trial.key_press)
-	console.log("stim_ids1 = " + stim_ids)
+	//console.log("stim_ids = " + stim_ids)
+
 	console.log("choice1 = " + choice)
 	console.log("j = " + j)
-if (j == 39 ){
-	console.log("j = " + j)
+if (j == 75 ){
+	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
 		second_selected = 2
-		console.log("second_selected = " + second_selected)
+		//console.log("second_selected = " + second_selected)
 			var second_notselected = second_selected+1
 			jsPsych.data.addDataToLastTrial({
 				stim_selected: second_selected
@@ -570,7 +730,7 @@ if (j == 39 ){
 		 "<img class = 'decision-right-fs-yes' src= '" + curr_images[6] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 3
-			console.log("second_selected = " + second_selected)
+			//console.log("second_selected = " + second_selected)
 				var second_notselected = second_selected-1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: second_selected
@@ -581,7 +741,7 @@ if (j == 39 ){
 			 "<img class = 'decision-left-fs' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 4
-					console.log("second_selected = " + second_selected)
+					//console.log("second_selected = " + second_selected)
 						var second_notselected = second_selected+1
 						jsPsych.data.addDataToLastTrial({
 							stim_selected: second_selected
@@ -592,7 +752,7 @@ if (j == 39 ){
 					 "<img class = 'decision-left-fs' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 5
-				 		 console.log("second_selected = " + second_selected)
+				 		 //console.log("second_selected = " + second_selected)
 				 			 var second_notselected = second_selected-1
 				 			 jsPsych.data.addDataToLastTrial({
 				 				 stim_selected: second_selected
@@ -603,7 +763,7 @@ if (j == 39 ){
 				 			"<img class = 'decision-left-fs' src= '" + curr_images[4] + "'></img></div>"
 }
 }else if(j == -1){
-	console.log("j = " + j)
+	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
 		second_selected = 3
 		console.log("second_selected = " + second_selected)
@@ -657,6 +817,118 @@ if (j == 39 ){
 	}
 
 }
+
+var get_second_selected_left = function() {
+	var second_stage_trial = jsPsych.data.getLastTrialData()
+	var j = second_stage_trial.key_press;
+	var choice = choices.indexOf(second_stage_trial.key_press)
+	/*console.log("stim_ids1 = " + stim_ids)
+	console.log("choice1 = " + choice)
+	console.log("j = " + j)*/
+if (j == 83 ){
+	console.log("j = " + j)
+	if (stim_ids[1] == 2 ){
+		second_selected = 3
+		console.log("second_selected = " + second_selected)
+			var second_notselected = second_selected-1
+			jsPsych.data.addDataToLastTrial({
+				stim_selected: second_selected
+			})
+		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
+		 "<img class = 'decision-left-fs-yes' src= '" + curr_images[7] + "'></img></div>" +
+		 "<img class = 'decision-right-fs' src= '" + curr_images[6] + "'></img></div>"
+	 }else if (stim_ids[1] == 3 ){
+			second_selected = 2
+			console.log("second_selected = " + second_selected)
+				var second_notselected = second_selected+1
+				jsPsych.data.addDataToLastTrial({
+					stim_selected: second_selected
+				})
+			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+			 "<img class = 'decision-right-fs' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-fs-yes' src= '" + curr_images[6] + "'></img></div>"
+		 }else if (stim_ids[1] == 4 ){
+					second_selected = 5
+					console.log("second_selected = " + second_selected)
+						var second_notselected = second_selected-1
+						jsPsych.data.addDataToLastTrial({
+							stim_selected: second_selected
+						})
+					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+					"<div class = centerbox><div class = fixation>+</div></div>"+
+					 "<img class = 'decision-right-fs' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-fs-yes' src= '" + curr_images[5] + "'></img></div>"
+				 }else if (stim_ids[1] == 5 ){
+				 		 second_selected = 4
+				 		 console.log("second_selected = " + second_selected)
+				 			 var second_notselected = second_selected+1
+				 			 jsPsych.data.addDataToLastTrial({
+				 				 stim_selected: second_selected
+				 			 })
+				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
+				 			"<img class = 'decision-right-fs' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-fs-yes' src= '" + curr_images[4] + "'></img></div>"
+}
+}else if(j == -1){
+	console.log("j = " + j)
+	if (stim_ids[1] == 2 ){
+		second_selected = 2
+		console.log("second_selected = " + second_selected)
+			var second_notselected = second_selected+1
+			jsPsych.data.addDataToLastTrial({
+				stim_selected: second_selected
+			})
+		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+		"<div class = centerbox><div class = fixation>+</div></div>"+
+		 "<img class = 'decision-right-fs-yes' src= '" + curr_images[6] + "'></img></div>" +
+		 "<img class = 'decision-left-fs' src= '" + curr_images[7] + "'></img></div>"
+	 }else if (stim_ids[1] == 3 ){
+			second_selected = 3
+			console.log("second_selected = " + second_selected)
+				var second_notselected = second_selected-1
+				jsPsych.data.addDataToLastTrial({
+					stim_selected: second_selected
+				})
+			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+			"<div class = centerbox><div class = fixation>+</div></div>"+
+			 "<img class = 'decision-right-fs-yes' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-fs' src= '" + curr_images[6] + "'></img></div>"
+		 }else if (stim_ids[1] == 4 ){
+					second_selected = 4
+					console.log("second_selected = " + second_selected)
+						var second_notselected = second_selected+1
+						jsPsych.data.addDataToLastTrial({
+							stim_selected: second_selected
+						})
+					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+					"<div class = centerbox><div class = fixation>+</div></div>"+
+					 "<img class = 'decision-right-fs-yes' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-fs' src= '" + curr_images[5] + "'></img></div>"
+				 }else if (stim_ids[1] == 5 ){
+				 		 second_selected = 5
+				 		 console.log("second_selected = " + second_selected)
+				 			 var second_notselected = second_selected-1
+				 			 jsPsych.data.addDataToLastTrial({
+				 				 stim_selected: second_selected
+				 			 })
+				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
+				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
+				 			"<img class = 'decision-right-fs-yes' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-fs' src= '" + curr_images[4] + "'></img></div>"
+}
+	} else {
+		second_selected = -1
+		jsPsych.data.addDataToLastTrial({
+			stim_selected: second_selected
+		})
+	}
+
+}
+
+var get_second_selected_new = isLeftGroup ? get_second_selected_left : get_second_selected_right;
 
 /*var get_second_selected = function() {
 	var second_stage_trial = jsPsych.data.getLastTrialData()
@@ -719,8 +991,8 @@ After FB, the FB_atrix is updated.
 */
 
 var get_feedback_new = function() {
-	 console.log("second_selected = " + second_selected)
-	  /*console.log("second_selected = " + (second_selected-2))
+	/* console.log("second_selected = " + second_selected)
+	  console.log("second_selected = " + (second_selected-2))
 	 console.log("current_trial = " + current_trial)
  try {	 console.log("prob = " + FB_matrix[second_selected - 2][current_trial])
   }catch{}
@@ -735,7 +1007,7 @@ var get_feedback_new = function() {
 	//	var bg_img = background_Image_stage_1
 		// update_FB();
 		FB = 1
-		// console.log("1")
+		 console.log("+1")
 		total_score += 1
 		 console.log("total_score= " + total_score)
 		if (second_selected == 2){
@@ -758,8 +1030,9 @@ var get_feedback_new = function() {
 	} else {
 	//	update_FB();
 		FB = 0
+		console.log("-1")
 		total_score -= 1
-		//console.log("total_score= " + total_score)
+		console.log("total_score= " + total_score)
 		if (second_selected == 2){
 				fb_img = terminal_state_img[6]
 		}else if (second_selected == 3){
@@ -799,7 +1072,7 @@ var get_feedback = function() {
 		FB = 1
 		// console.log("1")
 		total_score += 1
-		 console.log("total_score= " + total_score)
+		 //console.log("total_score= " + total_score)
 		if (stim_ids[0] == 2 || stim_ids[0] == 3){
 				fb_img = terminal_state_img[0]
 				bg_img = background_Image_stage_1
@@ -1164,8 +1437,7 @@ var FB_matrix1 = [];
 	,0.4025286,0.4407576,0.4209231,0.3849606,0.4592534,0.4242348,0.4071564
 	,0.4231040,0.4139300,0.3661564,0.3746036,0.3791919,0.4192339];
 
-	FB_matrix1[2] =
-	[0.4191846,0.4837978,0.4538876,0.4447230,0.4829738,0.4690658,0.4703774
+	FB_matrix1[2] =	[0.4191846,0.4837978,0.4538876,0.4447230,0.4829738,0.4690658,0.4703774
 	,0.4766901,0.4813980,0.4450169,0.4344249,0.4552269,0.4410684,0.4926503
 	,0.5097746,0.4980754,0.4834097,0.5093161,0.5451685,0.5526403,0.5056880
 	,0.4980453,0.4885703,0.4629185,0.5158396,0.4656236,0.4997898,0.5122041
@@ -1705,7 +1977,7 @@ if (Math.random() <= 0.5 ){
 // Actions go or no-go
 var choices_1 = []
 // Actions for left and right
-var choices = [37, 39]
+var choices = [83, 75]
 var stim_side = ['decision-left', 'decision-right']
 var stim_move = ['selected-left', 'selected-right']
 
@@ -2083,7 +2355,7 @@ var second_stage = {
 	},
 	stimulus: choose_second_stage,
 	is_html: true,
-	choices: choices,
+	choices: choices_1,
 	timing_stim: 2000,
 	timing_response: 2000,
 	response_ends_trial: true,
@@ -2182,6 +2454,7 @@ var two_stage_decision_experiment = []
 //two_stage_decision_experiment.push(start_practice_block);
 //two_stage_decision_experiment.push(attention_node)
 for (var i = 0; i < practice_trials_num; i++) {
+	two_stage_decision_experiment.push(fixation)
 	two_stage_decision_experiment.push(first_stage)
 	two_stage_decision_experiment.push(first_stage_selected)
 	two_stage_decision_experiment.push(second_stage)
@@ -2203,6 +2476,7 @@ two_stage_decision_experiment.push(attention_node)
 two_stage_decision_experiment.push(wait_block)
 for (var i = 0; i < test_trials_num / 2; i++) {
 	two_stage_decision_experiment.push(attention_node)
+	two_stage_decision_experiment.push(fixation)
 	two_stage_decision_experiment.push(first_stage)
 	two_stage_decision_experiment.push(first_stage_selected)
 	two_stage_decision_experiment.push(second_stage)
