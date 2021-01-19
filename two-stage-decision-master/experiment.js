@@ -2008,8 +2008,8 @@ var intertrial_wait_update_FB = {
 	stimulus: update_FB_data, //dummy stimulus. Returns "" but updates previous trial
 	is_html: true,
 	timing_post_trial: 0,
-	timing_stim: 10,
-	timing_response: 10
+	timing_stim: 1,
+	timing_response: 1
 }
 
 var intertrial_wait = {
@@ -2151,7 +2151,6 @@ var noFB_node = {
 
 var fixation = {
 	type: 'poldrack-single-stim',
-	//*S* stimulus: '<div class = centerbox><div class = fixation>+</div></div>',
 	//*S* is_html: true,
 	stimulus:	"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 	'<div class = centerbox><div class = fixation>+</div></div>',
@@ -2161,8 +2160,8 @@ var fixation = {
 		trial_id: 'fixation'
 	},
 	timing_post_trial: 0,
-	timing_stim: 500,
-	timing_response: 500,
+	timing_stim: 1000,
+	timing_response: 1000,
 	on_finish: function() {
 		jsPsych.data.addDataToLastTrial({
 			exp_stage: exp_stage
