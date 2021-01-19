@@ -246,18 +246,18 @@
 
 .strategy_stim_left {
   display: block;
-  height: 10vw;
+  height: 12vw;
 	position:absolute;
-	top:23%;
-	left:50%;
+	top:26%;
+	left:48%;
 	transform: translate(-195%,-5%);
 }
 
 .strategy_stim_right {
   display: block;
-  height: 10vw;
+  height: 12vw;
 	position:absolute;
-	top:23%;
-	left:50%;
+	top:26%;
+	left:52%;
 	transform: translate(100%,-5%);
 }
