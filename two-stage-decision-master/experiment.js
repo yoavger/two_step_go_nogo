@@ -292,30 +292,30 @@ var get_ss_stim_right = function(images, colors) {
 	var ss_stim_array = [
 		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[6] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[6] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[2] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[7] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[7] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[0] +"'> </img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[7] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[7] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[2] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[6] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[6] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[0] +"'> </img></div>"
 		],
 		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[4] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[4] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[2] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[5] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[5] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[0] +"'> </img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[5] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[5] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[2] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[4] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[4] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[0] +"'> </img></div>"
 		]
 	]
@@ -331,30 +331,30 @@ var get_ss_stim_left = function(images, colors) {
 	var ss_stim_array = [
 		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[6] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[6] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[7] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[7] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[7] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[7] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[6] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[6] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>"
 		],
 		["<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[4] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[4] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[5] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[5] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>",
 
 			"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			"<img class = 'decision-left-fs' src= '" + images[5] + "'></img></div>" +
+			"<img class = 'decision-left-ss' src= '" + images[5] + "'></img></div>" +
 			"<img class = 'strategy_stim_left' src= '" + strategy_stim[1] +"'> </img></div>" +
-			"<img class = 'decision-right-fs' src= '" + images[4] + "'></img></div>"+
+			"<img class = 'decision-right-ss' src= '" + images[4] + "'></img></div>"+
 			"<img class = 'strategy_stim_right' src= '" + strategy_stim[2] +"'> </img></div>"
 		]
 	]
@@ -726,8 +726,8 @@ if (j == 75 ){
 			})
 		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-		 "<img class = 'decision-left-fs' src= '" + curr_images[7] + "'></img></div>" +
-		 "<img class = 'decision-right-fs-yes' src= '" + curr_images[6] + "'></img></div>"
+		 "<img class = 'decision-left-ss' src= '" + curr_images[7] + "'></img></div>" +
+		 "<img class = 'decision-right-ss-yes' src= '" + curr_images[6] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 3
 			//console.log("second_selected = " + second_selected)
@@ -737,8 +737,8 @@ if (j == 75 ){
 				})
 			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			 "<img class = 'decision-right-fs-yes' src= '" + curr_images[7] + "'></img></div>" +
-			 "<img class = 'decision-left-fs' src= '" + curr_images[6] + "'></img></div>"
+			 "<img class = 'decision-right-ss-yes' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-ss' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 4
 					//console.log("second_selected = " + second_selected)
@@ -748,8 +748,8 @@ if (j == 75 ){
 						})
 					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 					"<div class = centerbox><div class = fixation>+</div></div>"+
-					 "<img class = 'decision-right-fs-yes' src= '" + curr_images[4] + "'></img></div>" +
-					 "<img class = 'decision-left-fs' src= '" + curr_images[5] + "'></img></div>"
+					 "<img class = 'decision-right-ss-yes' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-ss' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 5
 				 		 //console.log("second_selected = " + second_selected)
@@ -759,8 +759,8 @@ if (j == 75 ){
 				 			 })
 				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
-				 			"<img class = 'decision-right-fs-yes' src= '" + curr_images[5] + "'></img></div>" +
-				 			"<img class = 'decision-left-fs' src= '" + curr_images[4] + "'></img></div>"
+				 			"<img class = 'decision-right-ss-yes' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-ss' src= '" + curr_images[4] + "'></img></div>"
 }
 }else if(j == -1){
 	//console.log("j = " + j)
@@ -773,8 +773,8 @@ if (j == 75 ){
 			})
 		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-		 "<img class = 'decision-right-fs' src= '" + curr_images[6] + "'></img></div>" +
-		 "<img class = 'decision-left-fs-yes' src= '" + curr_images[7] + "'></img></div>"
+		 "<img class = 'decision-right-ss' src= '" + curr_images[6] + "'></img></div>" +
+		 "<img class = 'decision-left-ss-yes' src= '" + curr_images[7] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 2
 			console.log("second_selected = " + second_selected)
@@ -784,8 +784,8 @@ if (j == 75 ){
 				})
 			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			 "<img class = 'decision-right-fs' src= '" + curr_images[7] + "'></img></div>" +
-			 "<img class = 'decision-left-fs-yes' src= '" + curr_images[6] + "'></img></div>"
+			 "<img class = 'decision-right-ss' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-ss-yes' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 5
 					console.log("second_selected = " + second_selected)
@@ -795,8 +795,8 @@ if (j == 75 ){
 						})
 					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 					"<div class = centerbox><div class = fixation>+</div></div>"+
-					 "<img class = 'decision-right-fs' src= '" + curr_images[4] + "'></img></div>" +
-					 "<img class = 'decision-left-fs-yes' src= '" + curr_images[5] + "'></img></div>"
+					 "<img class = 'decision-right-ss' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-ss-yes' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 4
 				 		 console.log("second_selected = " + second_selected)
@@ -806,8 +806,8 @@ if (j == 75 ){
 				 			 })
 				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
-				 			"<img class = 'decision-right-fs' src= '" + curr_images[5] + "'></img></div>" +
-				 			"<img class = 'decision-left-fs-yes' src= '" + curr_images[4] + "'></img></div>"
+				 			"<img class = 'decision-right-ss' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-ss-yes' src= '" + curr_images[4] + "'></img></div>"
 }
 	} else {
 		second_selected = -1
@@ -836,8 +836,8 @@ if (j == 83 ){
 			})
 		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-		 "<img class = 'decision-left-fs-yes' src= '" + curr_images[7] + "'></img></div>" +
-		 "<img class = 'decision-right-fs' src= '" + curr_images[6] + "'></img></div>"
+		 "<img class = 'decision-left-ss-yes' src= '" + curr_images[7] + "'></img></div>" +
+		 "<img class = 'decision-right-ss' src= '" + curr_images[6] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 2
 			console.log("second_selected = " + second_selected)
@@ -847,8 +847,8 @@ if (j == 83 ){
 				})
 			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			 "<img class = 'decision-right-fs' src= '" + curr_images[7] + "'></img></div>" +
-			 "<img class = 'decision-left-fs-yes' src= '" + curr_images[6] + "'></img></div>"
+			 "<img class = 'decision-right-ss' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-ss-yes' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 5
 					console.log("second_selected = " + second_selected)
@@ -858,8 +858,8 @@ if (j == 83 ){
 						})
 					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 					"<div class = centerbox><div class = fixation>+</div></div>"+
-					 "<img class = 'decision-right-fs' src= '" + curr_images[4] + "'></img></div>" +
-					 "<img class = 'decision-left-fs-yes' src= '" + curr_images[5] + "'></img></div>"
+					 "<img class = 'decision-right-ss' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-ss-yes' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 4
 				 		 console.log("second_selected = " + second_selected)
@@ -869,8 +869,8 @@ if (j == 83 ){
 				 			 })
 				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
-				 			"<img class = 'decision-right-fs' src= '" + curr_images[5] + "'></img></div>" +
-				 			"<img class = 'decision-left-fs-yes' src= '" + curr_images[4] + "'></img></div>"
+				 			"<img class = 'decision-right-ss' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-ss-yes' src= '" + curr_images[4] + "'></img></div>"
 }
 }else if(j == -1){
 	console.log("j = " + j)
@@ -883,8 +883,8 @@ if (j == 83 ){
 			})
 		return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 		"<div class = centerbox><div class = fixation>+</div></div>"+
-		 "<img class = 'decision-right-fs-yes' src= '" + curr_images[6] + "'></img></div>" +
-		 "<img class = 'decision-left-fs' src= '" + curr_images[7] + "'></img></div>"
+		 "<img class = 'decision-right-ss-yes' src= '" + curr_images[6] + "'></img></div>" +
+		 "<img class = 'decision-left-ss' src= '" + curr_images[7] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 3
 			console.log("second_selected = " + second_selected)
@@ -894,8 +894,8 @@ if (j == 83 ){
 				})
 			return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 			"<div class = centerbox><div class = fixation>+</div></div>"+
-			 "<img class = 'decision-right-fs-yes' src= '" + curr_images[7] + "'></img></div>" +
-			 "<img class = 'decision-left-fs' src= '" + curr_images[6] + "'></img></div>"
+			 "<img class = 'decision-right-ss-yes' src= '" + curr_images[7] + "'></img></div>" +
+			 "<img class = 'decision-left-ss' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 4
 					console.log("second_selected = " + second_selected)
@@ -905,8 +905,8 @@ if (j == 83 ){
 						})
 					return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 					"<div class = centerbox><div class = fixation>+</div></div>"+
-					 "<img class = 'decision-right-fs-yes' src= '" + curr_images[4] + "'></img></div>" +
-					 "<img class = 'decision-left-fs' src= '" + curr_images[5] + "'></img></div>"
+					 "<img class = 'decision-right-ss-yes' src= '" + curr_images[4] + "'></img></div>" +
+					 "<img class = 'decision-left-ss' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 5
 				 		 console.log("second_selected = " + second_selected)
@@ -916,8 +916,8 @@ if (j == 83 ){
 				 			 })
 				 		 return "<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
 				 		 "<div class = centerbox><div class = fixation>+</div></div>"+
-				 			"<img class = 'decision-right-fs-yes' src= '" + curr_images[5] + "'></img></div>" +
-				 			"<img class = 'decision-left-fs' src= '" + curr_images[4] + "'></img></div>"
+				 			"<img class = 'decision-right-ss-yes' src= '" + curr_images[5] + "'></img></div>" +
+				 			"<img class = 'decision-left-ss' src= '" + curr_images[4] + "'></img></div>"
 }
 	} else {
 		second_selected = -1
@@ -1020,7 +1020,7 @@ var get_feedback_new = function() {
 				fb_img = terminal_state_img[1]
 		}
 		return 	"<img class = 'background_images' src= '" + background_Image_stage_1 +"'> </img></div>"+
-						"<img  class = 'FB-stim' src ='" + fb_img + "'></div>"
+						"<img  class = 'FB-stim-reward' src ='" + fb_img + "'></div>"
 
 		//return "<div><img  class = decision-fb src = 'images/gold_coin.png'></img></div>"
 

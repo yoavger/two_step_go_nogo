@@ -130,31 +130,39 @@
 
 .FB-stim {
     display: block;
-    height: 30vw;
+    height: 38vw;
   	position:absolute;
-  	top:46%;
+  	top:50%;
   	left:51%;
   	transform: translate(-50%,-50%);
 }
 
+.FB-stim-reward {
+    display: block;
+    height: 45vw;
+  	position:absolute;
+  	top:50%;
+  	left:51%;
+  	transform: translate(-50%,-50%);
+}
 
 .decision-left-ss {
-  height: 18vw;
+  height: 25vw;
   position:absolute;
-  top:40%;
-  left:50%;
+  top:45%;
+  left:52%;
   margin-right:-50%;
-  transform: translate(-125%,-5%);
+  transform: translate(-110%,-5%);
 }
 /* -80 bigger means go right*/
 
 .decision-right-ss {
-	height: 18vw;
+  height: 25vw;
   position:absolute;
-  top:40%;
+  top:45%;
   left:50%;
   margin-right:-50%;
-  transform: translate(25%,-5%);
+  transform: translate(10%,-5%);
 }
 /* -10 smaller means go left*/
 
@@ -167,14 +175,14 @@
   transform: translate(-125%,-5%);
 }
 
-.decision-left-sss_yes {
-  height: 18vw;
+.decision-left-ss-yes {
+  height: 25vw;
   position:absolute;
-  top:40%;
-  left:50%;
+  top:45%;
+  left:52%;
   margin-right:-50%;
-  transform: translate(-125%,-5%);
-  border: 3px
+  transform: translate(-110%,-5%);
+  border: 8px
   dashed #0000ff;
 }
 
@@ -187,14 +195,14 @@
   transform: translate(25%,-5%);
 }
 
-.decision-right-sss_yes {
-  height: 18vw;
+.decision-right-ss-yes {
+  height: 25vw;
   position:absolute;
-  top:40%;
+  top:45%;
   left:50%;
   margin-right:-50%;
-  transform: translate(25%,-5%);
-  border: 3px
+  transform: translate(10%,-5%);
+  border: 8px
   dashed #0000ff;
 }
 
@@ -246,18 +254,19 @@
 
 .strategy_stim_left {
   display: block;
-  height: 12vw;
+  height: 13vw;
 	position:absolute;
-	top:26%;
+	top:20%;
 	left:48%;
 	transform: translate(-195%,-5%);
 }
+
 
 .strategy_stim_right {
   display: block;
   height: 12vw;
 	position:absolute;
-	top:26%;
+	top:20%;
 	left:52%;
 	transform: translate(100%,-5%);
 }
