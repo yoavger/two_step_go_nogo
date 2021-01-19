@@ -2360,7 +2360,7 @@ var second_stage = {
 	choices: choices_1,
 	timing_stim: 2000,
 	timing_response: 2000,
-	response_ends_trial: true,
+	response_ends_trial: false,
 	timing_post_trial: 0,
 	// stage: 2,
 	on_finish: function() {
