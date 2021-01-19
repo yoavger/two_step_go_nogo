@@ -46,11 +46,11 @@ $( document ).ready(function() {
 
                  promise.then(function(data) {
 
-
+                   localStorage.setItem('bonus', window.total_score);
                      $.ajax({
                          type: "POST",
                          url: '/save',
-                         data: { "data": data },
+                         data: { "data": data, 'total_score': window.total_score },
                          success: function(){ document.location = "/next" },
                          dataType: "application/json",
 
