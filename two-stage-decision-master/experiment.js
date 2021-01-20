@@ -2399,7 +2399,7 @@ var FB_stage = {
 	stimulus: get_feedback_new,
 	is_html: true,
 	choices: 'none',
-	timing_response: 500,
+	timing_response: 1000,
 	continue_after_response: false,
 	timing_post_trial: 0,
 	on_finish: function() {
