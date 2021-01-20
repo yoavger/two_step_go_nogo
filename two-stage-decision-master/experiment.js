@@ -2341,7 +2341,7 @@ var first_stage_selected = {
 	choices: 'none',
 	is_html: true,
 	timing_post_trial: 0,
-	timing_response: 1000,
+	timing_response: 500,
 	stage : 1,
 	on_finish: function() {
 		jsPsych.data.addDataToLastTrial({
@@ -2383,7 +2383,7 @@ var second_stage_selected = {
 	choices: 'none',
 	is_html: true,
 	timing_post_trial: 0,
-	timing_response: 1000,
+	timing_response: 500,
 	on_finish: function() {
 		jsPsych.data.addDataToLastTrial({
 			exp_stage: exp_stage
