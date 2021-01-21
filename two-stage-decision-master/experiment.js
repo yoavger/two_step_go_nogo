@@ -2480,7 +2480,7 @@ for (var i = 0; i < practice_trials_num; i++) {
 two_stage_decision_experiment.push(attention_node)
 two_stage_decision_experiment.push(change_phase_block)
 two_stage_decision_experiment.push(start_test_block)
-for (var i = 0; i < test_trials_num / 2; i++) {
+for (var i = 0; i < test_trials_num / 3; i++) {
 	two_stage_decision_experiment.push(fixation)
 	two_stage_decision_experiment.push(first_stage)
 	two_stage_decision_experiment.push(first_stage_selected)
@@ -2490,7 +2490,18 @@ for (var i = 0; i < test_trials_num / 2; i++) {
 }
 two_stage_decision_experiment.push(attention_node)
 two_stage_decision_experiment.push(wait_block)
-for (var i = 0; i < test_trials_num / 2; i++) {
+for (var i = 0; i < test_trials_num / 3; i++) {
+	two_stage_decision_experiment.push(attention_node)
+	two_stage_decision_experiment.push(fixation)
+	two_stage_decision_experiment.push(first_stage)
+	two_stage_decision_experiment.push(first_stage_selected)
+	two_stage_decision_experiment.push(second_stage)
+	two_stage_decision_experiment.push(FB_node)
+	two_stage_decision_experiment.push(noFB_node)
+}
+two_stage_decision_experiment.push(attention_node)
+two_stage_decision_experiment.push(wait_block)
+for (var i = 0; i < test_trials_num / 3; i++) {
 	two_stage_decision_experiment.push(attention_node)
 	two_stage_decision_experiment.push(fixation)
 	two_stage_decision_experiment.push(first_stage)
