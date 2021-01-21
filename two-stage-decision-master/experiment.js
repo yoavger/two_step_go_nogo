@@ -427,14 +427,14 @@ Also updates the global variables choice, first_selected and first_notselected, 
  	var first_stage_trial = jsPsych.data.getLastTrialData()
  	var i = first_stage_trial.key_press;
  	var choice = choices.indexOf(first_stage_trial.key_press)
- 	console.log("stim_ids_fs = " + stim_ids)
+ 	//console.log("stim_ids_fs = " + stim_ids)
 	//console.log("choice1 = " + choice)
-	console.log("i = " + i)
+	//console.log("i = " + i)
  	if (i == 75 ){
 		//console.log("choice1 = " + choice)
  		if (stim_ids[1] == 0 ){
 			first_selected = 1
-			console.log("first_selected = " + first_selected)
+			//console.log("first_selected = " + first_selected)
 				var first_notselected = first_selected-1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: first_selected
@@ -445,7 +445,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
        "<img class = 'decision-right-fs-yes' src= '" + curr_images[1] + "'></img></div>"
  			}else {
 				first_selected = 3
-				console.log("first_selected = " + first_selected)
+				//console.log("first_selected = " + first_selected)
 					var first_notselected = first_selected-1
 					jsPsych.data.addDataToLastTrial({
 						stim_selected: first_selected
@@ -458,7 +458,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
 	}else if(i == -1){
 		if (stim_ids[1] == 0 ){
 			first_selected = 0
-			console.log("first_selected = " + first_selected)
+			//console.log("first_selected = " + first_selected)
 				var first_notselected = first_selected+1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: first_selected
@@ -469,7 +469,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
 			 "<img class = 'decision-left-fs-yes' src= '" + curr_images[0] + "'></img></div>"
 			}else {
 				first_selected = 2
-				console.log("first_selected = " + first_selected)
+				//console.log("first_selected = " + first_selected)
 					var first_notselected = first_selected+1
 					jsPsych.data.addDataToLastTrial({
 						stim_selected: first_selected
@@ -492,14 +492,14 @@ Also updates the global variables choice, first_selected and first_notselected, 
   var first_stage_trial = jsPsych.data.getLastTrialData()
   var i = first_stage_trial.key_press;
   var choice = choices.indexOf(first_stage_trial.key_press)
-  console.log("stim_ids1 = " + stim_ids)
-  console.log("choice1 = " + choice)
-  console.log("i = " + i)
+  //console.log("stim_ids1 = " + stim_ids)
+  //console.log("choice1 = " + choice)
+  //console.log("i = " + i)
   if (i == 83 ){
- 	 console.log("choice1 = " + choice)
+ 	 //console.log("choice1 = " + choice)
  	 if (stim_ids[1] == 0 ){
  		 first_selected = 0
- 		 console.log("first_selected = " + first_selected)
+ 		 //console.log("first_selected = " + first_selected)
  			 var first_notselected = first_selected+1
  			 jsPsych.data.addDataToLastTrial({
  				 stim_selected: first_selected
@@ -510,7 +510,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
  			"<img class = 'decision-right-fs' src= '" + curr_images[1] + "'></img></div>"
  		 }else {
  			 first_selected = 2
- 			 console.log("first_selected = " + first_selected)
+ 			 //console.log("first_selected = " + first_selected)
  				 var first_notselected = first_selected+1
  				 jsPsych.data.addDataToLastTrial({
  					 stim_selected: first_selected
@@ -523,7 +523,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
   }else if(i == -1){
  	 if (stim_ids[1] == 0 ){
  		 first_selected = 1
- 		 console.log("first_selected = " + first_selected)
+ 		 //console.log("first_selected = " + first_selected)
  			 var first_notselected = first_selected-1
  			 jsPsych.data.addDataToLastTrial({
  				 stim_selected: first_selected
@@ -534,7 +534,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
  			"<img class = 'decision-left-fs' src= '" + curr_images[0] + "'></img></div>"
  		 }else {
  			 first_selected = 3
- 			 console.log("first_selected = " + first_selected)
+ 			 //console.log("first_selected = " + first_selected)
  				 var first_notselected = first_selected-1
  				 jsPsych.data.addDataToLastTrial({
  					 stim_selected: first_selected
@@ -546,7 +546,7 @@ Also updates the global variables choice, first_selected and first_notselected, 
  				}
  	 }else{
  	 first_selected = -1
- 	 console.log("first_selected = " + first_selected)
+ 	 //console.log("first_selected = " + first_selected)
  	 jsPsych.data.addDataToLastTrial({
  		 stim_selected: first_selected
  	 })
@@ -713,8 +713,8 @@ var get_second_selected_right = function() {
 	var choice = choices.indexOf(second_stage_trial.key_press)
 	//console.log("stim_ids = " + stim_ids)
 
-	console.log("choice1 = " + choice)
-	console.log("j = " + j)
+	//console.log("choice1 = " + choice)
+	//console.log("j = " + j)
 if (j == 75 ){
 	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
@@ -766,7 +766,7 @@ if (j == 75 ){
 	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
 		second_selected = 3
-		console.log("second_selected = " + second_selected)
+		//console.log("second_selected = " + second_selected)
 			var second_notselected = second_selected-1
 			jsPsych.data.addDataToLastTrial({
 				stim_selected: second_selected
@@ -777,7 +777,7 @@ if (j == 75 ){
 		 "<img class = 'decision-left-ss-yes' src= '" + curr_images[7] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 2
-			console.log("second_selected = " + second_selected)
+			//console.log("second_selected = " + second_selected)
 				var second_notselected = second_selected+1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: second_selected
@@ -788,7 +788,7 @@ if (j == 75 ){
 			 "<img class = 'decision-left-ss-yes' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 5
-					console.log("second_selected = " + second_selected)
+					//console.log("second_selected = " + second_selected)
 						var second_notselected = second_selected-1
 						jsPsych.data.addDataToLastTrial({
 							stim_selected: second_selected
@@ -799,7 +799,7 @@ if (j == 75 ){
 					 "<img class = 'decision-left-ss-yes' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 4
-				 		 console.log("second_selected = " + second_selected)
+				 		 //console.log("second_selected = " + second_selected)
 				 			 var second_notselected = second_selected+1
 				 			 jsPsych.data.addDataToLastTrial({
 				 				 stim_selected: second_selected
@@ -826,10 +826,10 @@ var get_second_selected_left = function() {
 	console.log("choice1 = " + choice)
 	console.log("j = " + j)*/
 if (j == 83 ){
-	console.log("j = " + j)
+	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
 		second_selected = 3
-		console.log("second_selected = " + second_selected)
+		//console.log("second_selected = " + second_selected)
 			var second_notselected = second_selected-1
 			jsPsych.data.addDataToLastTrial({
 				stim_selected: second_selected
@@ -840,7 +840,7 @@ if (j == 83 ){
 		 "<img class = 'decision-right-ss' src= '" + curr_images[6] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 2
-			console.log("second_selected = " + second_selected)
+			//console.log("second_selected = " + second_selected)
 				var second_notselected = second_selected+1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: second_selected
@@ -851,7 +851,7 @@ if (j == 83 ){
 			 "<img class = 'decision-left-ss-yes' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 5
-					console.log("second_selected = " + second_selected)
+					//console.log("second_selected = " + second_selected)
 						var second_notselected = second_selected-1
 						jsPsych.data.addDataToLastTrial({
 							stim_selected: second_selected
@@ -862,7 +862,7 @@ if (j == 83 ){
 					 "<img class = 'decision-left-ss-yes' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 4
-				 		 console.log("second_selected = " + second_selected)
+				 		 //console.log("second_selected = " + second_selected)
 				 			 var second_notselected = second_selected+1
 				 			 jsPsych.data.addDataToLastTrial({
 				 				 stim_selected: second_selected
@@ -873,10 +873,10 @@ if (j == 83 ){
 				 			"<img class = 'decision-left-ss-yes' src= '" + curr_images[4] + "'></img></div>"
 }
 }else if(j == -1){
-	console.log("j = " + j)
+	//console.log("j = " + j)
 	if (stim_ids[1] == 2 ){
 		second_selected = 2
-		console.log("second_selected = " + second_selected)
+		//console.log("second_selected = " + second_selected)
 			var second_notselected = second_selected+1
 			jsPsych.data.addDataToLastTrial({
 				stim_selected: second_selected
@@ -887,7 +887,7 @@ if (j == 83 ){
 		 "<img class = 'decision-left-ss' src= '" + curr_images[7] + "'></img></div>"
 	 }else if (stim_ids[1] == 3 ){
 			second_selected = 3
-			console.log("second_selected = " + second_selected)
+			//console.log("second_selected = " + second_selected)
 				var second_notselected = second_selected-1
 				jsPsych.data.addDataToLastTrial({
 					stim_selected: second_selected
@@ -898,7 +898,7 @@ if (j == 83 ){
 			 "<img class = 'decision-left-ss' src= '" + curr_images[6] + "'></img></div>"
 		 }else if (stim_ids[1] == 4 ){
 					second_selected = 4
-					console.log("second_selected = " + second_selected)
+					//console.log("second_selected = " + second_selected)
 						var second_notselected = second_selected+1
 						jsPsych.data.addDataToLastTrial({
 							stim_selected: second_selected
@@ -909,7 +909,7 @@ if (j == 83 ){
 					 "<img class = 'decision-left-ss' src= '" + curr_images[5] + "'></img></div>"
 				 }else if (stim_ids[1] == 5 ){
 				 		 second_selected = 5
-				 		 console.log("second_selected = " + second_selected)
+				 		 //console.log("second_selected = " + second_selected)
 				 			 var second_notselected = second_selected-1
 				 			 jsPsych.data.addDataToLastTrial({
 				 				 stim_selected: second_selected
@@ -1007,9 +1007,9 @@ var get_feedback_new = function() {
 	//	var bg_img = background_Image_stage_1
 		// update_FB();
 		FB = 1
-		 console.log("+1")
+		 //console.log("+1")
 		total_score += 1
-		 console.log("total_score= " + total_score)
+		 //console.log("total_score= " + total_score)
 		if (second_selected == 2){
 				fb_img = terminal_state_img[2]
 		}else if (second_selected == 3){
@@ -1030,9 +1030,9 @@ var get_feedback_new = function() {
 	} else {
 	//	update_FB();
 		FB = 0
-		console.log("-1")
+		//console.log("-1")
 		total_score -= 1
-		console.log("total_score= " + total_score)
+		//console.log("total_score= " + total_score)
 		if (second_selected == 2){
 				fb_img = terminal_state_img[6]
 		}else if (second_selected == 3){
