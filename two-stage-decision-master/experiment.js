@@ -1133,8 +1133,8 @@ var performance_var = 0
 
 // task specific variables
 var total_score = 0 //track performance
-var practice_trials_num = 10
-var test_trials_num = 300
+var practice_trials_num = 20
+var test_trials_num = 252
 var stim_ids = [] //Tracks the ids of the last chosen stims.
 var current_trial = -1
 var first_selected = -1 //Tracks the ID of the selected fs stimulus
